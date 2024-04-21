@@ -1,4 +1,4 @@
-# LaTeX Math Support
+# 支持LaTeX Math
 
 LaTeX math is supported using MathJax.
 
