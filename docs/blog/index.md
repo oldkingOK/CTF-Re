@@ -2,5 +2,5 @@
 
 ❤️
 
-![[Pulana2.jpg|PunalaJam|220x400]]
+![[Pulana2.jpg|400]]
 
