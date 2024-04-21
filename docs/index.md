@@ -11,3 +11,8 @@
 ## 本仓库的设置
 
 1. ✅ `Settings` - `Files & links` - `Detect all file extensions` 
+
+## TODO List
+
+- TEA XTEA XXTEA 算法的研究
+- LoongArch Archlinux, RiscV 完整qemu环境搭建
