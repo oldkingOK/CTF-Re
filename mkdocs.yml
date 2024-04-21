@@ -1,4 +1,4 @@
-site_name: obsidian-mkdocs template
+site_name: oldkingOK 的 blog
 
 theme:
     name: 'material'
@@ -25,7 +25,7 @@ theme:
 # Extensions
 markdown_extensions:
   - footnotes
-  # - attr_list
+  - attr_list
   - pymdownx.arithmatex:
       generic: true
   # - pymdownx.superfences
