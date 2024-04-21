@@ -20,10 +20,13 @@ tags:
 [Instructions to build locally using mkdocs · Issue #1 · jobindjohn/obsidian-publish-mkdocs (github.com)](https://github.com/jobindjohn/obsidian-publish-mkdocs/issues/1)
 
 ```shell
-python -m venv xxx
+python -m venv okblog
 # activate
 pip install -r requirements.txt
+mkdocs serve
 ```
+
+#### requirements.txt
 
 ```
 mkdocs
@@ -68,3 +71,5 @@ markdown_extensions:
 同样解决的还有 `[file.ext](../static/file.ext){:download="文件名.txt"}` 这样可以直接下载文件了
 
 例如：`[样本](./static/DebugMe.apk){:download="DebugMe.apk"}`
+
+> 这里使用了 [Python-Markdown](https://python-markdown.github.io/extensions/) 的特性
