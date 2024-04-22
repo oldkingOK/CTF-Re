@@ -6,6 +6,10 @@
 
 ![图图](./assets/IDA.png)
 
+## idapython
+
+[官方文档](https://hex-rays.com/products/ida/support/idapython_docs/)
+
 ## 快照、标记、结构体
 
 [【看雪论坛】IDA技巧——结构体](https://bbs.kanxue.com/thread-266419.htm)
