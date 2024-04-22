@@ -20,3 +20,4 @@
 - LoongArch Archlinux, RiscV 完整qemu环境搭建
 - 解决易语言问题
 - 学习ELF相关知识
+- 继续学习《汇编语言》
