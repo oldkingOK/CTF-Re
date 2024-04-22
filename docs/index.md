@@ -16,3 +16,4 @@
 
 - TEA XTEA XXTEA 算法的研究
 - LoongArch Archlinux, RiscV 完整qemu环境搭建
+- 解决O2问题
