@@ -11,6 +11,8 @@
 ## 本仓库的设置
 
 1. ✅ `Settings` - `Files & links` - `Detect all file extensions` 
+2. 安装 [obsidian-omnisearch](https://github.com/scambier/obsidian-omnisearch) 用于搜索笔记
+3. 安装 [advanced-tables-obsidian](https://github.com/tgrosinger/advanced-tables-obsidian) 用于编辑表格
 
 ## TODO List
 
