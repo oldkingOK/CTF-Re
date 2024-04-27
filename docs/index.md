@@ -2,11 +2,13 @@
 
 ![[Pulana2.jpg|200]]
 
-这里是 ==oldkingOK== 的博客
+这里是 oldkingOK 的博客
 
 ## 关于
 
 本博客使用 [jobindjohn/obsidian-publish-mkdocs](https://github.com/jobindjohn/obsidian-publish-mkdocs) 模板构建
+
+图片来自 [Blue Archive, Plana (Blue Archive), Plana / 無題 - pixiv](https://www.pixiv.net/en/artworks/115017109) by [林檎酢π](https://www.pixiv.net/en/users/101974506)
 
 ## 本仓库的设置
 
