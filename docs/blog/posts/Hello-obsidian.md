@@ -21,7 +21,7 @@ tags:
 
 ```shell
 python -m venv okblog
-# activate
+./okblog/Scripts/activate
 pip install -r requirements.txt
 mkdocs serve
 ```
