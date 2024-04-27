@@ -61,3 +61,60 @@ print(solver.check())
 m = solver.model()
 print(m)
 ```
+
+## 图形处理
+
+```python
+pip install opencv-contrib-python easyocr
+```
+
+```python
+import easyocr
+# 创建reader对象
+reader = easyocr.Reader(['en'],gpu=False, model_storage_directory="./Model")    result = reader.readtext(f'./data2/{i}.jpg')
+```
+
+```python
+# 导入所有必要的库
+import cv2
+import os
+  
+# 从指定的路径读取视频
+cam = cv2.VideoCapture( "./iGotSmokynomial.mp4" )
+  
+try :
+      
+    # 创建名为data的文件夹
+    if not os.path.exists( 'data' ):
+        os.makedirs( 'data' )
+  
+# 如果未创建，则引发错误
+except OSError:
+    print ( 'Error: Creating directory of data' )
+  
+# frame
+currentframe = 0
+count = 0
+
+while ( True ):
+    # reading from frame
+    ret, frame = cam.read()
+  
+    if ret:
+        # 如果视频仍然存在，继续创建图像
+        gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        white_pixel_count = cv2.countNonZero(gray_frame)
+        total_pixels = frame.shape[0] * frame.shape[1]
+        # 写入提取的图像
+        if white_pixel_count > (0.99 * total_pixels):
+            name = './data/' + str (count) + '.jpg'
+            cv2.imwrite(name, gray_frame)
+            count += 1
+        # 增加计数器，以便显示创建了多少帧
+        currentframe += 1
+    else :
+        break
+# 一旦完成释放所有的空间和窗口
+cam.release()
+cv2.destroyAllWindows()
+```
