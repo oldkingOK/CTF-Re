@@ -6,12 +6,6 @@
 
 ![图图](./assets/IDA.png)
 
-## idapython
-
-[官方文档](https://hex-rays.com/products/ida/support/idapython_docs/)
-
-## 快照、标记、结构体
-
 [【看雪论坛】IDA技巧——结构体](https://bbs.kanxue.com/thread-266419.htm)
 
 ### 快照
@@ -38,5 +32,41 @@
 
 ### 扒数据
 
-**Shift_E** 提取二进制数据
-在C代码界面 **R** ascii码转换成字符
+1. **Shift_E** 提取二进制数据
+2. 在C代码界面 **R** ascii码转换成字符
+3. **D** 把汇编指令转换成数字格式
+
+### 函数
+
+1. **E** 修改函数的结尾到当前位置
+2. **Alt_P** 编辑函数的详细信息
+3. **Alt_E_F_D** 删除函数定义 —— 其实就是模拟选择 Edit - Functions - Delete function
+
+## idapython
+
+[官方文档](https://hex-rays.com/products/ida/support/idapython_docs/)
+
+## 设置
+
+### 字体
+
+IDA中的每一个工作区都可以设置自己的字体大小，选中工作区之后，点 Options - Fonts
+
+#### 窗口调整
+
+拖动子窗口的标题名，就可以把子窗口拖出来
+
+把鼠标放在标题名的下面的灰色的条条，就可以单击拖回去
+
+![[image-20240428175914810.png|400]]
+
+### 显示汇编详细信息
+
+Options - General - Disassembly
+
+| 名称                    | 功能                   |
+| --------------------- | -------------------- |
+| Line Prefixed (Graph) | 在Graph中显示行号          |
+| Stack pointer         | 显示栈指针，便于分析栈平衡        |
+| Auto Comments         | 显示汇编命令描述             |
+| Number of opcode...   | 显示机器码，0为不显示，非0设置显示宽度 |
