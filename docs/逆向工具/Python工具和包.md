@@ -2,16 +2,29 @@
 
 ## 解包PyInstaller
 
-[PyInstxtractor下载](./assets/bin/pyinstxtractor.py){:download="pyinstxtractor.py"} —— [github](https://github.com/extremecoders-re/pyinstxtractor)
+- [Python逆向——Pyinstaller逆向-软件逆向-看雪-](https://bbs.kanxue.com/thread-271253.htm)
 
-[PyCdc下载](./assets/bin/pycdc.exe){:download="pycdc.exe} —— [github](https://github.com/zrax/pycdc)
+[serfend/pydumpck](https://github.com/serfend/pydumpck)
 
-使用方法
-
+```shell
+pip install pydumpck
+pydumpck Py.exe
 ```
-python pyinstxtractor.py Py.exe
-.\pycdc.exe .\PyLu.pyc > PyLu.py
-```
+
+即可递归解包所有模块、程序
+
+> 已过时
+> 
+> [PyInstxtractor下载](./assets/bin/pyinstxtractor.py){:download="pyinstxtractor.py"} —— [github](https://github.com/extremecoders-re/pyinstxtractor)
+> 
+> [PyCdc下载](./assets/bin/pycdc.exe){:download="pycdc.exe} —— [github](https://github.com/zrax/pycdc)
+> 
+> 使用方法
+> 
+> ```
+> python pyinstxtractor.py Py.exe
+> .\pycdc.exe .\PyLu.pyc > PyLu.py
+> ```
 
 ## 常用函数
 
@@ -22,6 +35,12 @@ hex(n)[2:] # 7b
 bin(n) # 0b1111011
 chr(n) # {
 ord('{') # 123
+```
+
+### 格式化输出
+
+```python
+print("{:x} {:x}".format(12345,123456)) # 3039 1e240
 ```
 ## Crypto
 
@@ -46,6 +65,14 @@ bytearray.fromhex('7bab')
 from string import printable # 可打印字符集
 ```
 
+#### MD5
+
+```python
+r = "HelloWorld"
+import hashlib
+print(hashlib.md5(r.encode()).hexdigest())
+```
+
 ### 解方程
 
 ==z3一把梭==
@@ -62,6 +89,24 @@ m = solver.model()
 print(m)
 ```
 
+**C++的z3**
+
+> 参考
+> - [Z3求解器简介及环境搭建_z3建模求解-CSDN博客](https://blog.csdn.net/guo_shaokun/article/details/99891545)
+> - [opencv - LNK2019: unresolved external symbol error in Visual Studio C++ - Stack Overflow](https://stackoverflow.com/questions/17769977/lnk2019-unresolved-external-symbol-error-in-visual-studio-c)
+> - [c++ - What does "#pragma comment" mean? - Stack Overflow](https://stackoverflow.com/questions/3484434/what-does-pragma-comment-mean)
+
+1. [Release z3-4.13.0 · Z3Prover/z3 (github.com)](https://github.com/Z3Prover/z3/releases/tag/z3-4.13.0) 下载 z3-4.13.0-x64-win.zip
+2. 在项目中添加三个文件夹，分别为include、lib、bin
+3. 将 zip 中的 `include` 所有头文件、`libz3.lib`、 `libz3.dll` 分别放进上面的文件夹
+4. 新建VS c++ 项目，右键解决方案，属性
+	- VC++目录---->包含目录 下拉 edit ---> 添加 `$(ProjectDir)include`
+	- VC++目录---->库目录 下拉 edit ---> 添加 `$(ProjectDir)lib`
+	- 调试 --->环境 设置 edit ---> 添加 `PATH=$(ProjectDir)bin`
+	- Linker ---> General ---> Additional Library Directories ---> 添加 `$(ProjectDir)lib`
+5. 在cpp源文件加上 `#pragma comment (lib, "libz3.lib")`
+
+[代码示例 z3/examples/c++/example](https://github.com/Z3Prover/z3/blob/master/examples/c++/example.cpp))
 ## 图形处理
 
 ```python

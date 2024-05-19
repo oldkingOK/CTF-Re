@@ -63,6 +63,7 @@ crontab
 
 ```shell
 find . -name "*.txt" | xargs file
+find . -type f | xargs grep "wisher_GUI" # type f 文件
 ```
 
 ## Linux哲学

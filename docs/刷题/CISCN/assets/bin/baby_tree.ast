@@ -1,0 +1,658 @@
+(source_file "re.swift"
+  (func_decl range=[re.swift:1:1 - line:14:1] "check(_:_:)" interface type='(String, String) -> Bool' access=internal
+    (parameter_list range=[re.swift:1:11 - line:1:49]
+      (parameter "encoded" type='String' interface type='String')
+      (parameter "keyValue" type='String' interface type='String'))
+    (result 
+      (type_ident
+        (component id='Bool' bind=Swift.(file).Bool)))
+    (brace_stmt range=[re.swift:1:59 - line:14:1]
+      (pattern_binding_decl range=[re.swift:2:5 - line:2:33]
+        (pattern_named type='[UInt8]' 'b')
+        Original init:
+        (call_expr type='[UInt8]' location=re.swift:2:19 range=[re.swift:2:13 - line:2:33] nothrow
+          (constructor_ref_call_expr type='(String.UTF8View) -> [UInt8]' location=re.swift:2:19 range=[re.swift:2:13 - line:2:19] nothrow
+            (declref_expr implicit type='(Array<UInt8>.Type) -> (String.UTF8View) -> Array<UInt8>' location=re.swift:2:19 range=[re.swift:2:19 - line:2:19] decl=Swift.(file).Array extension.init(_:) [with (substitution_map generic_signature=<Element, S where Element == S.Element, S : Sequence> (substitution Element -> UInt8) (substitution S -> String.UTF8View))] function_ref=single)
+            (argument_list implicit
+              (argument
+                (type_expr type='[UInt8].Type' location=re.swift:2:13 range=[re.swift:2:13 - line:2:19] typerepr='[UInt8]'))
+            ))
+          (argument_list
+            (argument
+              (member_ref_expr type='String.UTF8View' location=re.swift:2:29 range=[re.swift:2:21 - line:2:29] decl=Swift.(file).String extension.utf8
+                (declref_expr type='String' location=re.swift:2:21 range=[re.swift:2:21 - line:2:21] decl=re.(file).check(_:_:).encoded@re.swift:1:14 function_ref=unapplied)))
+          ))
+        Processed init:
+        (call_expr type='[UInt8]' location=re.swift:2:19 range=[re.swift:2:13 - line:2:33] nothrow
+          (constructor_ref_call_expr type='(String.UTF8View) -> [UInt8]' location=re.swift:2:19 range=[re.swift:2:13 - line:2:19] nothrow
+            (declref_expr implicit type='(Array<UInt8>.Type) -> (String.UTF8View) -> Array<UInt8>' location=re.swift:2:19 range=[re.swift:2:19 - line:2:19] decl=Swift.(file).Array extension.init(_:) [with (substitution_map generic_signature=<Element, S where Element == S.Element, S : Sequence> (substitution Element -> UInt8) (substitution S -> String.UTF8View))] function_ref=single)
+            (argument_list implicit
+              (argument
+                (type_expr type='[UInt8].Type' location=re.swift:2:13 range=[re.swift:2:13 - line:2:19] typerepr='[UInt8]'))
+            ))
+          (argument_list
+            (argument
+              (member_ref_expr type='String.UTF8View' location=re.swift:2:29 range=[re.swift:2:21 - line:2:29] decl=Swift.(file).String extension.utf8
+                (declref_expr type='String' location=re.swift:2:21 range=[re.swift:2:21 - line:2:21] decl=re.(file).check(_:_:).encoded@re.swift:1:14 function_ref=unapplied)))
+          )))
+
+      (var_decl range=[re.swift:2:9 - line:2:9] "b" type='[UInt8]' interface type='[UInt8]' access=private readImpl=stored writeImpl=stored readWriteImpl=stored)
+
+      (pattern_binding_decl range=[re.swift:3:5 - line:3:34]
+        (pattern_named type='[UInt8]' 'k')
+        Original init:
+        (call_expr type='[UInt8]' location=re.swift:3:19 range=[re.swift:3:13 - line:3:34] nothrow
+          (constructor_ref_call_expr type='(String.UTF8View) -> [UInt8]' location=re.swift:3:19 range=[re.swift:3:13 - line:3:19] nothrow
+            (declref_expr implicit type='(Array<UInt8>.Type) -> (String.UTF8View) -> Array<UInt8>' location=re.swift:3:19 range=[re.swift:3:19 - line:3:19] decl=Swift.(file).Array extension.init(_:) [with (substitution_map generic_signature=<Element, S where Element == S.Element, S : Sequence> (substitution Element -> UInt8) (substitution S -> String.UTF8View))] function_ref=single)
+            (argument_list implicit
+              (argument
+                (type_expr type='[UInt8].Type' location=re.swift:3:13 range=[re.swift:3:13 - line:3:19] typerepr='[UInt8]'))
+            ))
+          (argument_list
+            (argument
+              (member_ref_expr type='String.UTF8View' location=re.swift:3:30 range=[re.swift:3:21 - line:3:30] decl=Swift.(file).String extension.utf8
+                (declref_expr type='String' location=re.swift:3:21 range=[re.swift:3:21 - line:3:21] decl=re.(file).check(_:_:).keyValue@re.swift:1:33 function_ref=unapplied)))
+          ))
+        Processed init:
+        (call_expr type='[UInt8]' location=re.swift:3:19 range=[re.swift:3:13 - line:3:34] nothrow
+          (constructor_ref_call_expr type='(String.UTF8View) -> [UInt8]' location=re.swift:3:19 range=[re.swift:3:13 - line:3:19] nothrow
+            (declref_expr implicit type='(Array<UInt8>.Type) -> (String.UTF8View) -> Array<UInt8>' location=re.swift:3:19 range=[re.swift:3:19 - line:3:19] decl=Swift.(file).Array extension.init(_:) [with (substitution_map generic_signature=<Element, S where Element == S.Element, S : Sequence> (substitution Element -> UInt8) (substitution S -> String.UTF8View))] function_ref=single)
+            (argument_list implicit
+              (argument
+                (type_expr type='[UInt8].Type' location=re.swift:3:13 range=[re.swift:3:13 - line:3:19] typerepr='[UInt8]'))
+            ))
+          (argument_list
+            (argument
+              (member_ref_expr type='String.UTF8View' location=re.swift:3:30 range=[re.swift:3:21 - line:3:30] decl=Swift.(file).String extension.utf8
+                (declref_expr type='String' location=re.swift:3:21 range=[re.swift:3:21 - line:3:21] decl=re.(file).check(_:_:).keyValue@re.swift:1:33 function_ref=unapplied)))
+          )))
+
+      (var_decl range=[re.swift:3:9 - line:3:9] "k" type='[UInt8]' interface type='[UInt8]' access=private readImpl=stored writeImpl=stored readWriteImpl=stored)
+
+      (pattern_binding_decl range=[re.swift:4:5 - line:4:25]
+        (pattern_typed type='UInt8'
+          (pattern_named type='UInt8' 'r0')
+          (type_ident
+            (component id='UInt8' bind=Swift.(file).UInt8)))
+        (pattern_typed type='UInt8'
+          (pattern_named type='UInt8' 'r1')
+          (type_ident
+            (component id='UInt8' bind=Swift.(file).UInt8)))
+        (pattern_typed type='UInt8'
+          (pattern_named type='UInt8' 'r2')
+          (type_ident
+            (component id='UInt8' bind=Swift.(file).UInt8)))
+        (pattern_typed type='UInt8'
+          (pattern_named type='UInt8' 'r3')
+          (type_ident
+            (component id='UInt8' bind=Swift.(file).UInt8))))
+
+      (var_decl range=[re.swift:4:9 - line:4:9] "r0" type='UInt8' interface type='UInt8' access=private readImpl=stored writeImpl=stored readWriteImpl=stored)
+
+      (var_decl range=[re.swift:4:13 - line:4:13] "r1" type='UInt8' interface type='UInt8' access=private readImpl=stored writeImpl=stored readWriteImpl=stored)
+
+      (var_decl range=[re.swift:4:17 - line:4:17] "r2" type='UInt8' interface type='UInt8' access=private readImpl=stored writeImpl=stored readWriteImpl=stored)
+
+      (var_decl range=[re.swift:4:21 - line:4:21] "r3" type='UInt8' interface type='UInt8' access=private readImpl=stored writeImpl=stored readWriteImpl=stored)
+
+      (for_each_stmt range=[re.swift:5:5 - line:12:5]
+        (pattern_named type='Int' 'i')
+        (pattern_named type='Int' 'i')
+        (binary_expr type='ClosedRange<Int>' location=re.swift:5:15 range=[re.swift:5:14 - line:5:26] nothrow
+          (dot_syntax_call_expr implicit type='(Int, Int) -> ClosedRange<Int>' location=re.swift:5:15 range=[re.swift:5:15 - line:5:15] nothrow
+            (declref_expr type='(Int.Type) -> (Int, Int) -> ClosedRange<Int>' location=re.swift:5:15 range=[re.swift:5:15 - line:5:15] decl=Swift.(file).Comparable extension.... [with (substitution_map generic_signature=<Self where Self : Comparable> (substitution Self -> Int))] function_ref=double)
+            (argument_list implicit
+              (argument
+                (type_expr implicit type='Int.Type' location=re.swift:5:15 range=[re.swift:5:15 - line:5:15] typerepr='Int'))
+            ))
+          (argument_list implicit
+            (argument
+              (integer_literal_expr type='Int' location=re.swift:5:14 range=[re.swift:5:14 - line:5:14] value=0 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+            (argument
+              (binary_expr type='Int' location=re.swift:5:25 range=[re.swift:5:18 - line:5:26] nothrow
+                (dot_syntax_call_expr implicit type='(Int, Int) -> Int' location=re.swift:5:25 range=[re.swift:5:25 - line:5:25] nothrow
+                  (declref_expr type='(Int.Type) -> (Int, Int) -> Int' location=re.swift:5:25 range=[re.swift:5:25 - line:5:25] decl=Swift.(file).Int extension.- function_ref=double)
+                  (argument_list implicit
+                    (argument
+                      (type_expr implicit type='Int.Type' location=re.swift:5:25 range=[re.swift:5:25 - line:5:25] typerepr='Int'))
+                  ))
+                (argument_list implicit
+                  (argument
+                    (member_ref_expr type='Int' location=re.swift:5:20 range=[re.swift:5:18 - line:5:20] decl=Swift.(file).Array extension.count [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                      (load_expr implicit type='[UInt8]' location=re.swift:5:18 range=[re.swift:5:18 - line:5:18]
+                        (declref_expr type='@lvalue [UInt8]' location=re.swift:5:18 range=[re.swift:5:18 - line:5:18] decl=re.(file).check(_:_:).b@re.swift:2:9 function_ref=unapplied))))
+                  (argument
+                    (integer_literal_expr type='Int' location=re.swift:5:26 range=[re.swift:5:26 - line:5:26] value=4 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                )))
+          ))
+        (var_decl implicit range=[re.swift:5:11 - line:5:11] "$i$generator" type='ClosedRange<Int>.Iterator' interface type='ClosedRange<Int>.Iterator' access=private readImpl=stored writeImpl=stored readWriteImpl=stored)
+
+        (declref_expr implicit type='@lvalue ClosedRange<Int>.Iterator' location=re.swift:5:11 range=[re.swift:5:11 - line:5:11] decl=re.(file).check(_:_:).$i$generator@re.swift:5:11 function_ref=unapplied)
+        (brace_stmt range=[re.swift:5:27 - line:12:5]
+          (assign_expr type='()' location=re.swift:6:26 range=[re.swift:6:9 - line:6:57]
+            (tuple_expr type='(@lvalue UInt8, @lvalue UInt8, @lvalue UInt8, @lvalue UInt8)' location=re.swift:6:9 range=[re.swift:6:9 - line:6:24] names='','','',''
+              (declref_expr type='@lvalue UInt8' location=re.swift:6:10 range=[re.swift:6:10 - line:6:10] decl=re.(file).check(_:_:).r0@re.swift:4:9 function_ref=unapplied)
+              (declref_expr type='@lvalue UInt8' location=re.swift:6:14 range=[re.swift:6:14 - line:6:14] decl=re.(file).check(_:_:).r1@re.swift:4:13 function_ref=unapplied)
+              (declref_expr type='@lvalue UInt8' location=re.swift:6:18 range=[re.swift:6:18 - line:6:18] decl=re.(file).check(_:_:).r2@re.swift:4:17 function_ref=unapplied)
+              (declref_expr type='@lvalue UInt8' location=re.swift:6:22 range=[re.swift:6:22 - line:6:22] decl=re.(file).check(_:_:).r3@re.swift:4:21 function_ref=unapplied))
+            (tuple_expr type='(UInt8, UInt8, UInt8, UInt8)' location=re.swift:6:28 range=[re.swift:6:28 - line:6:57] names='','','',''
+              (load_expr implicit type='UInt8' location=re.swift:6:30 range=[re.swift:6:29 - line:6:32]
+                (subscript_expr type='@lvalue UInt8' location=re.swift:6:30 range=[re.swift:6:29 - line:6:32] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                  (inout_expr implicit type='inout Array<UInt8>' location=re.swift:6:29 range=[re.swift:6:29 - line:6:29]
+                    (declref_expr type='@lvalue [UInt8]' location=re.swift:6:29 range=[re.swift:6:29 - line:6:29] decl=re.(file).check(_:_:).b@re.swift:2:9 function_ref=unapplied))
+                  (argument_list
+                    (argument
+                      (declref_expr type='Int' location=re.swift:6:31 range=[re.swift:6:31 - line:6:31] decl=re.(file).check(_:_:).i@re.swift:5:9 function_ref=unapplied))
+                  )))
+              (load_expr implicit type='UInt8' location=re.swift:6:36 range=[re.swift:6:35 - line:6:40]
+                (subscript_expr type='@lvalue UInt8' location=re.swift:6:36 range=[re.swift:6:35 - line:6:40] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                  (inout_expr implicit type='inout Array<UInt8>' location=re.swift:6:35 range=[re.swift:6:35 - line:6:35]
+                    (declref_expr type='@lvalue [UInt8]' location=re.swift:6:35 range=[re.swift:6:35 - line:6:35] decl=re.(file).check(_:_:).b@re.swift:2:9 function_ref=unapplied))
+                  (argument_list
+                    (argument
+                      (binary_expr type='Int' location=re.swift:6:38 range=[re.swift:6:37 - line:6:39] nothrow
+                        (dot_syntax_call_expr implicit type='(Int, Int) -> Int' location=re.swift:6:38 range=[re.swift:6:38 - line:6:38] nothrow
+                          (declref_expr type='(Int.Type) -> (Int, Int) -> Int' location=re.swift:6:38 range=[re.swift:6:38 - line:6:38] decl=Swift.(file).Int extension.+ function_ref=double)
+                          (argument_list implicit
+                            (argument
+                              (type_expr implicit type='Int.Type' location=re.swift:6:38 range=[re.swift:6:38 - line:6:38] typerepr='Int'))
+                          ))
+                        (argument_list implicit
+                          (argument
+                            (declref_expr type='Int' location=re.swift:6:37 range=[re.swift:6:37 - line:6:37] decl=re.(file).check(_:_:).i@re.swift:5:9 function_ref=unapplied))
+                          (argument
+                            (integer_literal_expr type='Int' location=re.swift:6:39 range=[re.swift:6:39 - line:6:39] value=1 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                        )))
+                  )))
+              (load_expr implicit type='UInt8' location=re.swift:6:44 range=[re.swift:6:43 - line:6:48]
+                (subscript_expr type='@lvalue UInt8' location=re.swift:6:44 range=[re.swift:6:43 - line:6:48] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                  (inout_expr implicit type='inout Array<UInt8>' location=re.swift:6:43 range=[re.swift:6:43 - line:6:43]
+                    (declref_expr type='@lvalue [UInt8]' location=re.swift:6:43 range=[re.swift:6:43 - line:6:43] decl=re.(file).check(_:_:).b@re.swift:2:9 function_ref=unapplied))
+                  (argument_list
+                    (argument
+                      (binary_expr type='Int' location=re.swift:6:46 range=[re.swift:6:45 - line:6:47] nothrow
+                        (dot_syntax_call_expr implicit type='(Int, Int) -> Int' location=re.swift:6:46 range=[re.swift:6:46 - line:6:46] nothrow
+                          (declref_expr type='(Int.Type) -> (Int, Int) -> Int' location=re.swift:6:46 range=[re.swift:6:46 - line:6:46] decl=Swift.(file).Int extension.+ function_ref=double)
+                          (argument_list implicit
+                            (argument
+                              (type_expr implicit type='Int.Type' location=re.swift:6:46 range=[re.swift:6:46 - line:6:46] typerepr='Int'))
+                          ))
+                        (argument_list implicit
+                          (argument
+                            (declref_expr type='Int' location=re.swift:6:45 range=[re.swift:6:45 - line:6:45] decl=re.(file).check(_:_:).i@re.swift:5:9 function_ref=unapplied))
+                          (argument
+                            (integer_literal_expr type='Int' location=re.swift:6:47 range=[re.swift:6:47 - line:6:47] value=2 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                        )))
+                  )))
+              (load_expr implicit type='UInt8' location=re.swift:6:52 range=[re.swift:6:51 - line:6:56]
+                (subscript_expr type='@lvalue UInt8' location=re.swift:6:52 range=[re.swift:6:51 - line:6:56] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                  (inout_expr implicit type='inout Array<UInt8>' location=re.swift:6:51 range=[re.swift:6:51 - line:6:51]
+                    (declref_expr type='@lvalue [UInt8]' location=re.swift:6:51 range=[re.swift:6:51 - line:6:51] decl=re.(file).check(_:_:).b@re.swift:2:9 function_ref=unapplied))
+                  (argument_list
+                    (argument
+                      (binary_expr type='Int' location=re.swift:6:54 range=[re.swift:6:53 - line:6:55] nothrow
+                        (dot_syntax_call_expr implicit type='(Int, Int) -> Int' location=re.swift:6:54 range=[re.swift:6:54 - line:6:54] nothrow
+                          (declref_expr type='(Int.Type) -> (Int, Int) -> Int' location=re.swift:6:54 range=[re.swift:6:54 - line:6:54] decl=Swift.(file).Int extension.+ function_ref=double)
+                          (argument_list implicit
+                            (argument
+                              (type_expr implicit type='Int.Type' location=re.swift:6:54 range=[re.swift:6:54 - line:6:54] typerepr='Int'))
+                          ))
+                        (argument_list implicit
+                          (argument
+                            (declref_expr type='Int' location=re.swift:6:53 range=[re.swift:6:53 - line:6:53] decl=re.(file).check(_:_:).i@re.swift:5:9 function_ref=unapplied))
+                          (argument
+                            (integer_literal_expr type='Int' location=re.swift:6:55 range=[re.swift:6:55 - line:6:55] value=3 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                        )))
+                  )))))
+          (assign_expr type='()' location=re.swift:7:16 range=[re.swift:7:9 - line:7:49]
+            (subscript_expr type='@lvalue UInt8' location=re.swift:7:10 range=[re.swift:7:9 - line:7:14] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+              (inout_expr implicit type='inout Array<UInt8>' location=re.swift:7:9 range=[re.swift:7:9 - line:7:9]
+                (declref_expr type='@lvalue [UInt8]' location=re.swift:7:9 range=[re.swift:7:9 - line:7:9] decl=re.(file).check(_:_:).b@re.swift:2:9 function_ref=unapplied))
+              (argument_list
+                (argument
+                  (binary_expr type='Int' location=re.swift:7:12 range=[re.swift:7:11 - line:7:13] nothrow
+                    (dot_syntax_call_expr implicit type='(Int, Int) -> Int' location=re.swift:7:12 range=[re.swift:7:12 - line:7:12] nothrow
+                      (declref_expr type='(Int.Type) -> (Int, Int) -> Int' location=re.swift:7:12 range=[re.swift:7:12 - line:7:12] decl=Swift.(file).Int extension.+ function_ref=double)
+                      (argument_list implicit
+                        (argument
+                          (type_expr implicit type='Int.Type' location=re.swift:7:12 range=[re.swift:7:12 - line:7:12] typerepr='Int'))
+                      ))
+                    (argument_list implicit
+                      (argument
+                        (declref_expr type='Int' location=re.swift:7:11 range=[re.swift:7:11 - line:7:11] decl=re.(file).check(_:_:).i@re.swift:5:9 function_ref=unapplied))
+                      (argument
+                        (integer_literal_expr type='Int' location=re.swift:7:13 range=[re.swift:7:13 - line:7:13] value=0 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                    )))
+              ))
+            (binary_expr type='UInt8' location=re.swift:7:21 range=[re.swift:7:18 - line:7:49] nothrow
+              (dot_syntax_call_expr implicit type='(UInt8, UInt8) -> UInt8' location=re.swift:7:21 range=[re.swift:7:21 - line:7:21] nothrow
+                (declref_expr type='(UInt8.Type) -> (UInt8, UInt8) -> UInt8' location=re.swift:7:21 range=[re.swift:7:21 - line:7:21] decl=Swift.(file).UInt8 extension.^ function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (type_expr implicit type='UInt8.Type' location=re.swift:7:21 range=[re.swift:7:21 - line:7:21] typerepr='UInt8'))
+                ))
+              (argument_list implicit
+                (argument
+                  (load_expr implicit type='UInt8' location=re.swift:7:18 range=[re.swift:7:18 - line:7:18]
+                    (declref_expr type='@lvalue UInt8' location=re.swift:7:18 range=[re.swift:7:18 - line:7:18] decl=re.(file).check(_:_:).r2@re.swift:4:17 function_ref=unapplied)))
+                (argument
+                  (paren_expr type='(UInt8)' location=re.swift:7:43 range=[re.swift:7:23 - line:7:49]
+                    (binary_expr type='UInt8' location=re.swift:7:43 range=[re.swift:7:24 - line:7:45] nothrow
+                      (dot_syntax_call_expr implicit type='(UInt8, UInt8) -> UInt8' location=re.swift:7:43 range=[re.swift:7:43 - line:7:43] nothrow
+                        (declref_expr type='(UInt8.Type) -> (UInt8, UInt8) -> UInt8' location=re.swift:7:43 range=[re.swift:7:43 - line:7:43] decl=Swift.(file).UInt8 extension.& function_ref=double)
+                        (argument_list implicit
+                          (argument
+                            (type_expr implicit type='UInt8.Type' location=re.swift:7:43 range=[re.swift:7:43 - line:7:43] typerepr='UInt8'))
+                        ))
+                      (argument_list implicit
+                        (argument
+                          (paren_expr type='(UInt8)' location=re.swift:7:30 range=[re.swift:7:24 - line:7:41]
+                            (binary_expr type='UInt8' location=re.swift:7:30 range=[re.swift:7:25 - line:7:40] nothrow
+                              (dot_syntax_call_expr implicit type='(UInt8, UInt8) -> UInt8' location=re.swift:7:30 range=[re.swift:7:30 - line:7:30] nothrow
+                                (declref_expr type='(UInt8.Type) -> (UInt8, UInt8) -> UInt8' location=re.swift:7:30 range=[re.swift:7:30 - line:7:30] decl=Swift.(file).UInt8 extension.+ function_ref=double)
+                                (argument_list implicit
+                                  (argument
+                                    (type_expr implicit type='UInt8.Type' location=re.swift:7:30 range=[re.swift:7:30 - line:7:30] typerepr='UInt8'))
+                                ))
+                              (argument_list implicit
+                                (argument
+                                  (load_expr implicit type='UInt8' location=re.swift:7:26 range=[re.swift:7:25 - line:7:28]
+                                    (subscript_expr type='@lvalue UInt8' location=re.swift:7:26 range=[re.swift:7:25 - line:7:28] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                                      (inout_expr implicit type='inout Array<UInt8>' location=re.swift:7:25 range=[re.swift:7:25 - line:7:25]
+                                        (declref_expr type='@lvalue [UInt8]' location=re.swift:7:25 range=[re.swift:7:25 - line:7:25] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                                      (argument_list
+                                        (argument
+                                          (integer_literal_expr type='Int' location=re.swift:7:27 range=[re.swift:7:27 - line:7:27] value=0 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                                      ))))
+                                (argument
+                                  (paren_expr type='(UInt8)' location=re.swift:7:36 range=[re.swift:7:32 - line:7:40]
+                                    (binary_expr type='UInt8' location=re.swift:7:36 range=[re.swift:7:33 - line:7:39] nothrow
+                                      (dot_syntax_call_expr implicit type='(UInt8, Int) -> UInt8' location=re.swift:7:36 range=[re.swift:7:36 - line:7:36] nothrow
+                                        (declref_expr type='(UInt8.Type) -> (UInt8, Int) -> UInt8' location=re.swift:7:36 range=[re.swift:7:36 - line:7:36] decl=Swift.(file).FixedWidthInteger extension.>> [with (substitution_map generic_signature=<Self, Other where Self : FixedWidthInteger, Other : BinaryInteger> (substitution Self -> UInt8) (substitution Other -> Int))] function_ref=double)
+                                        (argument_list implicit
+                                          (argument
+                                            (type_expr implicit type='UInt8.Type' location=re.swift:7:36 range=[re.swift:7:36 - line:7:36] typerepr='UInt8'))
+                                        ))
+                                      (argument_list implicit
+                                        (argument
+                                          (load_expr implicit type='UInt8' location=re.swift:7:33 range=[re.swift:7:33 - line:7:33]
+                                            (declref_expr type='@lvalue UInt8' location=re.swift:7:33 range=[re.swift:7:33 - line:7:33] decl=re.(file).check(_:_:).r0@re.swift:4:9 function_ref=unapplied)))
+                                        (argument
+                                          (integer_literal_expr type='Int' location=re.swift:7:39 range=[re.swift:7:39 - line:7:39] value=4 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                                      ))))
+                              ))))
+                        (argument
+                          (integer_literal_expr type='UInt8' location=re.swift:7:45 range=[re.swift:7:45 - line:7:45] value=0xff builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                      ))))
+              )))
+          (assign_expr type='()' location=re.swift:8:16 range=[re.swift:8:9 - line:8:49]
+            (subscript_expr type='@lvalue UInt8' location=re.swift:8:10 range=[re.swift:8:9 - line:8:14] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+              (inout_expr implicit type='inout Array<UInt8>' location=re.swift:8:9 range=[re.swift:8:9 - line:8:9]
+                (declref_expr type='@lvalue [UInt8]' location=re.swift:8:9 range=[re.swift:8:9 - line:8:9] decl=re.(file).check(_:_:).b@re.swift:2:9 function_ref=unapplied))
+              (argument_list
+                (argument
+                  (binary_expr type='Int' location=re.swift:8:12 range=[re.swift:8:11 - line:8:13] nothrow
+                    (dot_syntax_call_expr implicit type='(Int, Int) -> Int' location=re.swift:8:12 range=[re.swift:8:12 - line:8:12] nothrow
+                      (declref_expr type='(Int.Type) -> (Int, Int) -> Int' location=re.swift:8:12 range=[re.swift:8:12 - line:8:12] decl=Swift.(file).Int extension.+ function_ref=double)
+                      (argument_list implicit
+                        (argument
+                          (type_expr implicit type='Int.Type' location=re.swift:8:12 range=[re.swift:8:12 - line:8:12] typerepr='Int'))
+                      ))
+                    (argument_list implicit
+                      (argument
+                        (declref_expr type='Int' location=re.swift:8:11 range=[re.swift:8:11 - line:8:11] decl=re.(file).check(_:_:).i@re.swift:5:9 function_ref=unapplied))
+                      (argument
+                        (integer_literal_expr type='Int' location=re.swift:8:13 range=[re.swift:8:13 - line:8:13] value=1 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                    )))
+              ))
+            (binary_expr type='UInt8' location=re.swift:8:21 range=[re.swift:8:18 - line:8:49] nothrow
+              (dot_syntax_call_expr implicit type='(UInt8, UInt8) -> UInt8' location=re.swift:8:21 range=[re.swift:8:21 - line:8:21] nothrow
+                (declref_expr type='(UInt8.Type) -> (UInt8, UInt8) -> UInt8' location=re.swift:8:21 range=[re.swift:8:21 - line:8:21] decl=Swift.(file).UInt8 extension.^ function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (type_expr implicit type='UInt8.Type' location=re.swift:8:21 range=[re.swift:8:21 - line:8:21] typerepr='UInt8'))
+                ))
+              (argument_list implicit
+                (argument
+                  (load_expr implicit type='UInt8' location=re.swift:8:18 range=[re.swift:8:18 - line:8:18]
+                    (declref_expr type='@lvalue UInt8' location=re.swift:8:18 range=[re.swift:8:18 - line:8:18] decl=re.(file).check(_:_:).r3@re.swift:4:21 function_ref=unapplied)))
+                (argument
+                  (paren_expr type='(UInt8)' location=re.swift:8:43 range=[re.swift:8:23 - line:8:49]
+                    (binary_expr type='UInt8' location=re.swift:8:43 range=[re.swift:8:24 - line:8:45] nothrow
+                      (dot_syntax_call_expr implicit type='(UInt8, UInt8) -> UInt8' location=re.swift:8:43 range=[re.swift:8:43 - line:8:43] nothrow
+                        (declref_expr type='(UInt8.Type) -> (UInt8, UInt8) -> UInt8' location=re.swift:8:43 range=[re.swift:8:43 - line:8:43] decl=Swift.(file).UInt8 extension.& function_ref=double)
+                        (argument_list implicit
+                          (argument
+                            (type_expr implicit type='UInt8.Type' location=re.swift:8:43 range=[re.swift:8:43 - line:8:43] typerepr='UInt8'))
+                        ))
+                      (argument_list implicit
+                        (argument
+                          (paren_expr type='(UInt8)' location=re.swift:8:30 range=[re.swift:8:24 - line:8:41]
+                            (binary_expr type='UInt8' location=re.swift:8:30 range=[re.swift:8:25 - line:8:40] nothrow
+                              (dot_syntax_call_expr implicit type='(UInt8, UInt8) -> UInt8' location=re.swift:8:30 range=[re.swift:8:30 - line:8:30] nothrow
+                                (declref_expr type='(UInt8.Type) -> (UInt8, UInt8) -> UInt8' location=re.swift:8:30 range=[re.swift:8:30 - line:8:30] decl=Swift.(file).UInt8 extension.+ function_ref=double)
+                                (argument_list implicit
+                                  (argument
+                                    (type_expr implicit type='UInt8.Type' location=re.swift:8:30 range=[re.swift:8:30 - line:8:30] typerepr='UInt8'))
+                                ))
+                              (argument_list implicit
+                                (argument
+                                  (load_expr implicit type='UInt8' location=re.swift:8:26 range=[re.swift:8:25 - line:8:28]
+                                    (subscript_expr type='@lvalue UInt8' location=re.swift:8:26 range=[re.swift:8:25 - line:8:28] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                                      (inout_expr implicit type='inout Array<UInt8>' location=re.swift:8:25 range=[re.swift:8:25 - line:8:25]
+                                        (declref_expr type='@lvalue [UInt8]' location=re.swift:8:25 range=[re.swift:8:25 - line:8:25] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                                      (argument_list
+                                        (argument
+                                          (integer_literal_expr type='Int' location=re.swift:8:27 range=[re.swift:8:27 - line:8:27] value=1 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                                      ))))
+                                (argument
+                                  (paren_expr type='(UInt8)' location=re.swift:8:36 range=[re.swift:8:32 - line:8:40]
+                                    (binary_expr type='UInt8' location=re.swift:8:36 range=[re.swift:8:33 - line:8:39] nothrow
+                                      (dot_syntax_call_expr implicit type='(UInt8, Int) -> UInt8' location=re.swift:8:36 range=[re.swift:8:36 - line:8:36] nothrow
+                                        (declref_expr type='(UInt8.Type) -> (UInt8, Int) -> UInt8' location=re.swift:8:36 range=[re.swift:8:36 - line:8:36] decl=Swift.(file).FixedWidthInteger extension.>> [with (substitution_map generic_signature=<Self, Other where Self : FixedWidthInteger, Other : BinaryInteger> (substitution Self -> UInt8) (substitution Other -> Int))] function_ref=double)
+                                        (argument_list implicit
+                                          (argument
+                                            (type_expr implicit type='UInt8.Type' location=re.swift:8:36 range=[re.swift:8:36 - line:8:36] typerepr='UInt8'))
+                                        ))
+                                      (argument_list implicit
+                                        (argument
+                                          (load_expr implicit type='UInt8' location=re.swift:8:33 range=[re.swift:8:33 - line:8:33]
+                                            (declref_expr type='@lvalue UInt8' location=re.swift:8:33 range=[re.swift:8:33 - line:8:33] decl=re.(file).check(_:_:).r1@re.swift:4:13 function_ref=unapplied)))
+                                        (argument
+                                          (integer_literal_expr type='Int' location=re.swift:8:39 range=[re.swift:8:39 - line:8:39] value=2 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                                      ))))
+                              ))))
+                        (argument
+                          (integer_literal_expr type='UInt8' location=re.swift:8:45 range=[re.swift:8:45 - line:8:45] value=0xff builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                      ))))
+              )))
+          (assign_expr type='()' location=re.swift:9:16 range=[re.swift:9:9 - line:9:26]
+            (subscript_expr type='@lvalue UInt8' location=re.swift:9:10 range=[re.swift:9:9 - line:9:14] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+              (inout_expr implicit type='inout Array<UInt8>' location=re.swift:9:9 range=[re.swift:9:9 - line:9:9]
+                (declref_expr type='@lvalue [UInt8]' location=re.swift:9:9 range=[re.swift:9:9 - line:9:9] decl=re.(file).check(_:_:).b@re.swift:2:9 function_ref=unapplied))
+              (argument_list
+                (argument
+                  (binary_expr type='Int' location=re.swift:9:12 range=[re.swift:9:11 - line:9:13] nothrow
+                    (dot_syntax_call_expr implicit type='(Int, Int) -> Int' location=re.swift:9:12 range=[re.swift:9:12 - line:9:12] nothrow
+                      (declref_expr type='(Int.Type) -> (Int, Int) -> Int' location=re.swift:9:12 range=[re.swift:9:12 - line:9:12] decl=Swift.(file).Int extension.+ function_ref=double)
+                      (argument_list implicit
+                        (argument
+                          (type_expr implicit type='Int.Type' location=re.swift:9:12 range=[re.swift:9:12 - line:9:12] typerepr='Int'))
+                      ))
+                    (argument_list implicit
+                      (argument
+                        (declref_expr type='Int' location=re.swift:9:11 range=[re.swift:9:11 - line:9:11] decl=re.(file).check(_:_:).i@re.swift:5:9 function_ref=unapplied))
+                      (argument
+                        (integer_literal_expr type='Int' location=re.swift:9:13 range=[re.swift:9:13 - line:9:13] value=2 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                    )))
+              ))
+            (binary_expr type='UInt8' location=re.swift:9:21 range=[re.swift:9:18 - line:9:26] nothrow
+              (dot_syntax_call_expr implicit type='(UInt8, UInt8) -> UInt8' location=re.swift:9:21 range=[re.swift:9:21 - line:9:21] nothrow
+                (declref_expr type='(UInt8.Type) -> (UInt8, UInt8) -> UInt8' location=re.swift:9:21 range=[re.swift:9:21 - line:9:21] decl=Swift.(file).UInt8 extension.^ function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (type_expr implicit type='UInt8.Type' location=re.swift:9:21 range=[re.swift:9:21 - line:9:21] typerepr='UInt8'))
+                ))
+              (argument_list implicit
+                (argument
+                  (load_expr implicit type='UInt8' location=re.swift:9:18 range=[re.swift:9:18 - line:9:18]
+                    (declref_expr type='@lvalue UInt8' location=re.swift:9:18 range=[re.swift:9:18 - line:9:18] decl=re.(file).check(_:_:).r0@re.swift:4:9 function_ref=unapplied)))
+                (argument
+                  (load_expr implicit type='UInt8' location=re.swift:9:24 range=[re.swift:9:23 - line:9:26]
+                    (subscript_expr type='@lvalue UInt8' location=re.swift:9:24 range=[re.swift:9:23 - line:9:26] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                      (inout_expr implicit type='inout Array<UInt8>' location=re.swift:9:23 range=[re.swift:9:23 - line:9:23]
+                        (declref_expr type='@lvalue [UInt8]' location=re.swift:9:23 range=[re.swift:9:23 - line:9:23] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                      (argument_list
+                        (argument
+                          (integer_literal_expr type='Int' location=re.swift:9:25 range=[re.swift:9:25 - line:9:25] value=2 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                      ))))
+              )))
+          (assign_expr type='()' location=re.swift:10:16 range=[re.swift:10:9 - line:10:26]
+            (subscript_expr type='@lvalue UInt8' location=re.swift:10:10 range=[re.swift:10:9 - line:10:14] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+              (inout_expr implicit type='inout Array<UInt8>' location=re.swift:10:9 range=[re.swift:10:9 - line:10:9]
+                (declref_expr type='@lvalue [UInt8]' location=re.swift:10:9 range=[re.swift:10:9 - line:10:9] decl=re.(file).check(_:_:).b@re.swift:2:9 function_ref=unapplied))
+              (argument_list
+                (argument
+                  (binary_expr type='Int' location=re.swift:10:12 range=[re.swift:10:11 - line:10:13] nothrow
+                    (dot_syntax_call_expr implicit type='(Int, Int) -> Int' location=re.swift:10:12 range=[re.swift:10:12 - line:10:12] nothrow
+                      (declref_expr type='(Int.Type) -> (Int, Int) -> Int' location=re.swift:10:12 range=[re.swift:10:12 - line:10:12] decl=Swift.(file).Int extension.+ function_ref=double)
+                      (argument_list implicit
+                        (argument
+                          (type_expr implicit type='Int.Type' location=re.swift:10:12 range=[re.swift:10:12 - line:10:12] typerepr='Int'))
+                      ))
+                    (argument_list implicit
+                      (argument
+                        (declref_expr type='Int' location=re.swift:10:11 range=[re.swift:10:11 - line:10:11] decl=re.(file).check(_:_:).i@re.swift:5:9 function_ref=unapplied))
+                      (argument
+                        (integer_literal_expr type='Int' location=re.swift:10:13 range=[re.swift:10:13 - line:10:13] value=3 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                    )))
+              ))
+            (binary_expr type='UInt8' location=re.swift:10:21 range=[re.swift:10:18 - line:10:26] nothrow
+              (dot_syntax_call_expr implicit type='(UInt8, UInt8) -> UInt8' location=re.swift:10:21 range=[re.swift:10:21 - line:10:21] nothrow
+                (declref_expr type='(UInt8.Type) -> (UInt8, UInt8) -> UInt8' location=re.swift:10:21 range=[re.swift:10:21 - line:10:21] decl=Swift.(file).UInt8 extension.^ function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (type_expr implicit type='UInt8.Type' location=re.swift:10:21 range=[re.swift:10:21 - line:10:21] typerepr='UInt8'))
+                ))
+              (argument_list implicit
+                (argument
+                  (load_expr implicit type='UInt8' location=re.swift:10:18 range=[re.swift:10:18 - line:10:18]
+                    (declref_expr type='@lvalue UInt8' location=re.swift:10:18 range=[re.swift:10:18 - line:10:18] decl=re.(file).check(_:_:).r1@re.swift:4:13 function_ref=unapplied)))
+                (argument
+                  (load_expr implicit type='UInt8' location=re.swift:10:24 range=[re.swift:10:23 - line:10:26]
+                    (subscript_expr type='@lvalue UInt8' location=re.swift:10:24 range=[re.swift:10:23 - line:10:26] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                      (inout_expr implicit type='inout Array<UInt8>' location=re.swift:10:23 range=[re.swift:10:23 - line:10:23]
+                        (declref_expr type='@lvalue [UInt8]' location=re.swift:10:23 range=[re.swift:10:23 - line:10:23] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                      (argument_list
+                        (argument
+                          (integer_literal_expr type='Int' location=re.swift:10:25 range=[re.swift:10:25 - line:10:25] value=3 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                      ))))
+              )))
+          (assign_expr type='()' location=re.swift:11:34 range=[re.swift:11:9 - line:11:59]
+            (tuple_expr type='(@lvalue UInt8, @lvalue UInt8, @lvalue UInt8, @lvalue UInt8)' location=re.swift:11:9 range=[re.swift:11:9 - line:11:32] names='','','',''
+              (subscript_expr type='@lvalue UInt8' location=re.swift:11:11 range=[re.swift:11:10 - line:11:13] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                (inout_expr implicit type='inout Array<UInt8>' location=re.swift:11:10 range=[re.swift:11:10 - line:11:10]
+                  (declref_expr type='@lvalue [UInt8]' location=re.swift:11:10 range=[re.swift:11:10 - line:11:10] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                (argument_list
+                  (argument
+                    (integer_literal_expr type='Int' location=re.swift:11:12 range=[re.swift:11:12 - line:11:12] value=0 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                ))
+              (subscript_expr type='@lvalue UInt8' location=re.swift:11:17 range=[re.swift:11:16 - line:11:19] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                (inout_expr implicit type='inout Array<UInt8>' location=re.swift:11:16 range=[re.swift:11:16 - line:11:16]
+                  (declref_expr type='@lvalue [UInt8]' location=re.swift:11:16 range=[re.swift:11:16 - line:11:16] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                (argument_list
+                  (argument
+                    (integer_literal_expr type='Int' location=re.swift:11:18 range=[re.swift:11:18 - line:11:18] value=1 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                ))
+              (subscript_expr type='@lvalue UInt8' location=re.swift:11:23 range=[re.swift:11:22 - line:11:25] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                (inout_expr implicit type='inout Array<UInt8>' location=re.swift:11:22 range=[re.swift:11:22 - line:11:22]
+                  (declref_expr type='@lvalue [UInt8]' location=re.swift:11:22 range=[re.swift:11:22 - line:11:22] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                (argument_list
+                  (argument
+                    (integer_literal_expr type='Int' location=re.swift:11:24 range=[re.swift:11:24 - line:11:24] value=2 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                ))
+              (subscript_expr type='@lvalue UInt8' location=re.swift:11:29 range=[re.swift:11:28 - line:11:31] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                (inout_expr implicit type='inout Array<UInt8>' location=re.swift:11:28 range=[re.swift:11:28 - line:11:28]
+                  (declref_expr type='@lvalue [UInt8]' location=re.swift:11:28 range=[re.swift:11:28 - line:11:28] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                (argument_list
+                  (argument
+                    (integer_literal_expr type='Int' location=re.swift:11:30 range=[re.swift:11:30 - line:11:30] value=3 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                )))
+            (tuple_expr type='(UInt8, UInt8, UInt8, UInt8)' location=re.swift:11:36 range=[re.swift:11:36 - line:11:59] names='','','',''
+              (load_expr implicit type='UInt8' location=re.swift:11:38 range=[re.swift:11:37 - line:11:40]
+                (subscript_expr type='@lvalue UInt8' location=re.swift:11:38 range=[re.swift:11:37 - line:11:40] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                  (inout_expr implicit type='inout Array<UInt8>' location=re.swift:11:37 range=[re.swift:11:37 - line:11:37]
+                    (declref_expr type='@lvalue [UInt8]' location=re.swift:11:37 range=[re.swift:11:37 - line:11:37] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                  (argument_list
+                    (argument
+                      (integer_literal_expr type='Int' location=re.swift:11:39 range=[re.swift:11:39 - line:11:39] value=1 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                  )))
+              (load_expr implicit type='UInt8' location=re.swift:11:44 range=[re.swift:11:43 - line:11:46]
+                (subscript_expr type='@lvalue UInt8' location=re.swift:11:44 range=[re.swift:11:43 - line:11:46] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                  (inout_expr implicit type='inout Array<UInt8>' location=re.swift:11:43 range=[re.swift:11:43 - line:11:43]
+                    (declref_expr type='@lvalue [UInt8]' location=re.swift:11:43 range=[re.swift:11:43 - line:11:43] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                  (argument_list
+                    (argument
+                      (integer_literal_expr type='Int' location=re.swift:11:45 range=[re.swift:11:45 - line:11:45] value=2 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                  )))
+              (load_expr implicit type='UInt8' location=re.swift:11:50 range=[re.swift:11:49 - line:11:52]
+                (subscript_expr type='@lvalue UInt8' location=re.swift:11:50 range=[re.swift:11:49 - line:11:52] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                  (inout_expr implicit type='inout Array<UInt8>' location=re.swift:11:49 range=[re.swift:11:49 - line:11:49]
+                    (declref_expr type='@lvalue [UInt8]' location=re.swift:11:49 range=[re.swift:11:49 - line:11:49] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                  (argument_list
+                    (argument
+                      (integer_literal_expr type='Int' location=re.swift:11:51 range=[re.swift:11:51 - line:11:51] value=3 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                  )))
+              (load_expr implicit type='UInt8' location=re.swift:11:56 range=[re.swift:11:55 - line:11:58]
+                (subscript_expr type='@lvalue UInt8' location=re.swift:11:56 range=[re.swift:11:55 - line:11:58] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                  (inout_expr implicit type='inout Array<UInt8>' location=re.swift:11:55 range=[re.swift:11:55 - line:11:55]
+                    (declref_expr type='@lvalue [UInt8]' location=re.swift:11:55 range=[re.swift:11:55 - line:11:55] decl=re.(file).check(_:_:).k@re.swift:3:9 function_ref=unapplied))
+                  (argument_list
+                    (argument
+                      (integer_literal_expr type='Int' location=re.swift:11:57 range=[re.swift:11:57 - line:11:57] value=0 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                  )))))))
+      (return_stmt range=[re.swift:13:5 - line:13:198]
+        (binary_expr type='Bool' location=re.swift:13:14 range=[re.swift:13:12 - line:13:198] nothrow
+          (dot_syntax_call_expr implicit type='(Array<UInt8>, Array<UInt8>) -> Bool' location=re.swift:13:14 range=[re.swift:13:14 - line:13:14] nothrow
+            (declref_expr type='(Array<UInt8>.Type) -> (Array<UInt8>, Array<UInt8>) -> Bool' location=re.swift:13:14 range=[re.swift:13:14 - line:13:14] decl=Swift.(file).Array extension.== [with (substitution_map generic_signature=<Element where Element : Equatable> (substitution Element -> UInt8))] function_ref=single)
+            (argument_list implicit
+              (argument
+                (type_expr implicit type='Array<UInt8>.Type' location=re.swift:13:14 range=[re.swift:13:14 - line:13:14] typerepr='Array<UInt8>'))
+            ))
+          (argument_list implicit
+            (argument
+              (load_expr implicit type='[UInt8]' location=re.swift:13:12 range=[re.swift:13:12 - line:13:12]
+                (declref_expr type='@lvalue [UInt8]' location=re.swift:13:12 range=[re.swift:13:12 - line:13:12] decl=re.(file).check(_:_:).b@re.swift:2:9 function_ref=unapplied)))
+            (argument
+              (array_expr type='[UInt8]' location=re.swift:13:17 range=[re.swift:13:17 - line:13:198] initializer=Swift.(file).Array extension.init(arrayLiteral:) [with (substitution_map generic_signature=<Element> (substitution Element -> UInt8))]
+                (integer_literal_expr type='UInt8' location=re.swift:13:18 range=[re.swift:13:18 - line:13:18] value=88 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:22 range=[re.swift:13:22 - line:13:22] value=35 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:26 range=[re.swift:13:26 - line:13:26] value=88 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:30 range=[re.swift:13:30 - line:13:30] value=225 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:35 range=[re.swift:13:35 - line:13:35] value=7 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:38 range=[re.swift:13:38 - line:13:38] value=201 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:43 range=[re.swift:13:43 - line:13:43] value=57 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:47 range=[re.swift:13:47 - line:13:47] value=94 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:51 range=[re.swift:13:51 - line:13:51] value=77 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:55 range=[re.swift:13:55 - line:13:55] value=56 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:59 range=[re.swift:13:59 - line:13:59] value=75 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:63 range=[re.swift:13:63 - line:13:63] value=168 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:68 range=[re.swift:13:68 - line:13:68] value=72 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:72 range=[re.swift:13:72 - line:13:72] value=218 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:77 range=[re.swift:13:77 - line:13:77] value=64 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:81 range=[re.swift:13:81 - line:13:81] value=91 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:85 range=[re.swift:13:85 - line:13:85] value=16 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:89 range=[re.swift:13:89 - line:13:89] value=101 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:94 range=[re.swift:13:94 - line:13:94] value=32 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:98 range=[re.swift:13:98 - line:13:98] value=207 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:103 range=[re.swift:13:103 - line:13:103] value=73 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:107 range=[re.swift:13:107 - line:13:107] value=130 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:112 range=[re.swift:13:112 - line:13:112] value=74 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:116 range=[re.swift:13:116 - line:13:116] value=128 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:121 range=[re.swift:13:121 - line:13:121] value=76 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:125 range=[re.swift:13:125 - line:13:125] value=201 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:130 range=[re.swift:13:130 - line:13:130] value=16 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:134 range=[re.swift:13:134 - line:13:134] value=248 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:139 range=[re.swift:13:139 - line:13:139] value=41 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:143 range=[re.swift:13:143 - line:13:143] value=205 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:148 range=[re.swift:13:148 - line:13:148] value=103 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:153 range=[re.swift:13:153 - line:13:153] value=84 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:157 range=[re.swift:13:157 - line:13:157] value=91 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:161 range=[re.swift:13:161 - line:13:161] value=99 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:165 range=[re.swift:13:165 - line:13:165] value=79 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:169 range=[re.swift:13:169 - line:13:169] value=202 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:174 range=[re.swift:13:174 - line:13:174] value=22 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:178 range=[re.swift:13:178 - line:13:178] value=131 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:183 range=[re.swift:13:183 - line:13:183] value=63 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:187 range=[re.swift:13:187 - line:13:187] value=255 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:192 range=[re.swift:13:192 - line:13:192] value=20 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)
+                (integer_literal_expr type='UInt8' location=re.swift:13:196 range=[re.swift:13:196 - line:13:196] value=16 builtin_initializer=Swift.(file).UInt8.init(_builtinIntegerLiteral:) initializer=**NULL**)))
+          )))))
+  (top_level_code_decl range=[re.swift:16:1 - line:21:1]
+    (brace_stmt implicit range=[re.swift:16:1 - line:21:1]
+      (if_stmt range=[re.swift:16:1 - line:21:1]
+        (binary_expr type='Bool' location=re.swift:16:32 range=[re.swift:16:4 - line:16:35] nothrow
+          (dot_syntax_call_expr implicit type='(Int, Int) -> Bool' location=re.swift:16:32 range=[re.swift:16:32 - line:16:32] nothrow
+            (declref_expr type='(Int.Type) -> (Int, Int) -> Bool' location=re.swift:16:32 range=[re.swift:16:32 - line:16:32] decl=Swift.(file).Int extension.>= function_ref=single)
+            (argument_list implicit
+              (argument
+                (type_expr implicit type='Int.Type' location=re.swift:16:32 range=[re.swift:16:32 - line:16:32] typerepr='Int'))
+            ))
+          (argument_list implicit
+            (argument
+              (member_ref_expr type='Int' location=re.swift:16:26 range=[re.swift:16:4 - line:16:26] decl=Swift.(file).Array extension.count [with (substitution_map generic_signature=<Element> (substitution Element -> String))]
+                (load_expr implicit type='[String]' location=re.swift:16:16 range=[re.swift:16:4 - line:16:16]
+                  (member_ref_expr type='@lvalue [String]' location=re.swift:16:16 range=[re.swift:16:4 - line:16:16] decl=Swift.(file).CommandLine.arguments
+                    (type_expr type='CommandLine.Type' location=re.swift:16:4 range=[re.swift:16:4 - line:16:4] typerepr='CommandLine')))))
+            (argument
+              (integer_literal_expr type='Int' location=re.swift:16:35 range=[re.swift:16:35 - line:16:35] value=2 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+          ))
+        (brace_stmt range=[re.swift:16:37 - line:21:1]
+          (pattern_binding_decl range=[re.swift:17:5 - line:17:39]
+            (pattern_named type='String' 'data')
+            Original init:
+            (subscript_expr type='<null>'
+              (member_ref_expr type='@lvalue [String]' location=re.swift:17:28 range=[re.swift:17:16 - line:17:28] decl=Swift.(file).CommandLine.arguments
+                (type_expr type='CommandLine.Type' location=re.swift:17:16 range=[re.swift:17:16 - line:17:16] typerepr='CommandLine'))
+              (argument_list
+                (argument
+                  (integer_literal_expr type='Int' location=re.swift:17:38 range=[re.swift:17:38 - line:17:38] value=1 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+              ))
+            Processed init:
+            (load_expr implicit type='String' location=re.swift:17:37 range=[re.swift:17:16 - line:17:39]
+              (subscript_expr type='@lvalue String' location=re.swift:17:37 range=[re.swift:17:16 - line:17:39] decl=Swift.(file).Array extension.subscript(_:) [with (substitution_map generic_signature=<Element> (substitution Element -> String))]
+                (inout_expr implicit type='inout Array<String>' location=re.swift:17:16 range=[re.swift:17:16 - line:17:28]
+                  (member_ref_expr type='@lvalue [String]' location=re.swift:17:28 range=[re.swift:17:16 - line:17:28] decl=Swift.(file).CommandLine.arguments
+                    (type_expr type='CommandLine.Type' location=re.swift:17:16 range=[re.swift:17:16 - line:17:16] typerepr='CommandLine')))
+                (argument_list
+                  (argument
+                    (integer_literal_expr type='Int' location=re.swift:17:38 range=[re.swift:17:38 - line:17:38] value=1 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+                ))))
+
+          (var_decl range=[re.swift:17:9 - line:17:9] "data" type='String' interface type='String' access=fileprivate let readImpl=stored immutable)
+
+          (pattern_binding_decl range=[re.swift:18:5 - line:18:15]
+            (pattern_named type='String' 'key')
+            Original init:
+            (string_literal_expr type='String' location=re.swift:18:15 range=[re.swift:18:15 - line:18:15] encoding=utf8 value="345y" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)
+            Processed init:
+            (string_literal_expr type='String' location=re.swift:18:15 range=[re.swift:18:15 - line:18:15] encoding=utf8 value="345y" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**))
+
+          (var_decl range=[re.swift:18:9 - line:18:9] "key" type='String' interface type='String' access=fileprivate let readImpl=stored immutable)
+
+          (pattern_binding_decl range=[re.swift:19:5 - line:19:33]
+            (pattern_named type='Bool' 'result')
+            Original init:
+            (call_expr type='Bool' location=re.swift:19:18 range=[re.swift:19:18 - line:19:33] nothrow
+              (declref_expr type='(String, String) -> Bool' location=re.swift:19:18 range=[re.swift:19:18 - line:19:18] decl=re.(file).check@re.swift:1:6 function_ref=single)
+              (argument_list
+                (argument
+                  (declref_expr type='String' location=re.swift:19:24 range=[re.swift:19:24 - line:19:24] decl=re.(file).top-level code.data@re.swift:17:9 function_ref=unapplied))
+                (argument
+                  (declref_expr type='String' location=re.swift:19:30 range=[re.swift:19:30 - line:19:30] decl=re.(file).top-level code.key@re.swift:18:9 function_ref=unapplied))
+              ))
+            Processed init:
+            (call_expr type='Bool' location=re.swift:19:18 range=[re.swift:19:18 - line:19:33] nothrow
+              (declref_expr type='(String, String) -> Bool' location=re.swift:19:18 range=[re.swift:19:18 - line:19:18] decl=re.(file).check@re.swift:1:6 function_ref=single)
+              (argument_list
+                (argument
+                  (declref_expr type='String' location=re.swift:19:24 range=[re.swift:19:24 - line:19:24] decl=re.(file).top-level code.data@re.swift:17:9 function_ref=unapplied))
+                (argument
+                  (declref_expr type='String' location=re.swift:19:30 range=[re.swift:19:30 - line:19:30] decl=re.(file).top-level code.key@re.swift:18:9 function_ref=unapplied))
+              )))
+
+          (var_decl range=[re.swift:19:9 - line:19:9] "result" type='Bool' interface type='Bool' access=fileprivate let readImpl=stored immutable)
+
+          (call_expr type='()' location=re.swift:20:5 range=[re.swift:20:5 - line:20:17] nothrow
+            (declref_expr type='(Any..., String, String) -> ()' location=re.swift:20:5 range=[re.swift:20:5 - line:20:5] decl=Swift.(file).print(_:separator:terminator:) function_ref=single)
+            (argument_list labels=_:separator:terminator:
+              (argument
+                (vararg_expansion_expr implicit type='Any...' location=re.swift:20:11 range=[re.swift:20:11 - line:20:11]
+                  (array_expr implicit type='Any...' location=re.swift:20:11 range=[re.swift:20:11 - line:20:11] initializer=**NULL**
+                    (erasure_expr implicit type='Any' location=re.swift:20:11 range=[re.swift:20:11 - line:20:11]
+                      (declref_expr type='Bool' location=re.swift:20:11 range=[re.swift:20:11 - line:20:11] decl=re.(file).top-level code.result@re.swift:19:9 function_ref=unapplied)))))
+              (argument label=separator
+                (default_argument_expr implicit type='String' location=re.swift:20:10 range=[re.swift:20:10 - line:20:10] default_args_owner=Swift.(file).print(_:separator:terminator:) param=1))
+              (argument label=terminator
+                (default_argument_expr implicit type='String' location=re.swift:20:10 range=[re.swift:20:10 - line:20:10] default_args_owner=Swift.(file).print(_:separator:terminator:) param=2))
+            )))))))

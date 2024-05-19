@@ -22,7 +22,7 @@
 
 1. **Shift_F1** 本地属性窗口
 2. 按 **Insert** 以C语言语法定义结构体
-3. **Ctrl_F5** 搜索刚定义的结构体，双击导入结构体
+3. **Ctrl_F** 搜索刚定义的结构体，双击导入结构体
 4. 右键变量 -> `Convert to struct...`
 
 ### 结构体数组
@@ -46,6 +46,13 @@
 
 [官方文档](https://hex-rays.com/products/ida/support/idapython_docs/)
 
+### 使用pip装库
+
+在IDA里执行，加个感叹号
+
+```shell
+!pip install xxx
+```
 ## 设置
 
 ### 字体
@@ -70,3 +77,9 @@ Options - General - Disassembly
 | Stack pointer         | 显示栈指针，便于分析栈平衡        |
 | Auto Comments         | 显示汇编命令描述             |
 | Number of opcode...   | 显示机器码，0为不显示，非0设置显示宽度 |
+
+## 调试
+
+### 暂停法
+
+如果程序有类似 `scanf` `getchar` ，就可以点击 `暂停` ，这样输入字符串之后，程序就会停在这些函数上，然后查看调用堆栈，就可以分析程序的关键部分
