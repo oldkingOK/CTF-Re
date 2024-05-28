@@ -8,6 +8,11 @@
 
 [【看雪论坛】IDA技巧——结构体](https://bbs.kanxue.com/thread-266419.htm)
 
+[IDA PRO 8.3 x86/x64/ARM/ARM64/MIPS/PPC/PPC64 (leakforum.io)](https://leakforum.io/Thread-IDA-PRO-8-3-x86-x64-ARM-ARM64-MIPS-PPC-PPC64)
+
+### 基础
+
+- **F5** 反编译 / 刷新反编译（patch或者应用结构体之后）
 ### 快照
 
 - **Ctrl_Shift_W** 保存快照
@@ -83,3 +88,11 @@ Options - General - Disassembly
 ### 暂停法
 
 如果程序有类似 `scanf` `getchar` ，就可以点击 `暂停` ，这样输入字符串之后，程序就会停在这些函数上，然后查看调用堆栈，就可以分析程序的关键部分
+
+### Rebase
+
+对于加载到内存中的so文件，如何找到对应函数是关键
+
+等到内存中加载了对应的so文件之后，`Ctrl-S` 选择 `so` 最低地址的段，复制地址
+
+复制一份so，再用IDA打开， `Edit -> Segments -> Rebase Program` 填上上面的地址，就不用每次都计算地址了
