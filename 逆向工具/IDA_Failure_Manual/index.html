@@ -1,0 +1,4078 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../IDA/">
+      
+      
+        <link rel="next" href="../IDA%E4%B8%BB%E9%A2%98/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>IDA错误手册 - oldkingOK 的 blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ida" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="oldkingOK 的 blog" class="md-header__button md-logo" aria-label="oldkingOK 的 blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            oldkingOK 的 blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IDA错误手册
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="oldkingOK 的 blog" class="md-nav__button md-logo" aria-label="oldkingOK 的 blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    oldkingOK 的 blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    你好~
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    环境配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Topic 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Topic 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topic%201/Note%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Note 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topic%201/Note%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Note 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hi~
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/hello/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/reverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    一些知识点
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            一些知识点
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/Compile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    编译
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/Elang/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    易语言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/FirmwareReverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    固件逆向
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/Linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux的一些知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/ModAndDiv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    编译器对取余和除法运算的优化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python沙箱逃逸
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/PythonMD5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 版本差异导致的MD5不同
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/Shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    壳
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/SomeAsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见疑难杂汇编指令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/WebAssembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebAssembly逆向
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/%E5%8F%8D%E8%B0%83%E8%AF%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    反反调试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_12" id="__nav_5_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    操作系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_12">
+            <span class="md-nav__icon md-icon"></span>
+            操作系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_12_1" id="__nav_5_12_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HIT课程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_12_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_12_1">
+            <span class="md-nav__icon md-icon"></span>
+            HIT课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/HIT%E8%AF%BE%E7%A8%8B/L1.%E4%BB%80%E4%B9%88%E6%98%AF%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L1.什么是操作系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/HIT%E8%AF%BE%E7%A8%8B/L2.%E6%8F%AD%E5%BC%80%E9%92%A2%E7%90%B4%E7%9A%84%E7%9B%96%E5%AD%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L2.揭开钢琴的盖子
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_12_2" id="__nav_5_12_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    看书
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_12_2">
+            <span class="md-nav__icon md-icon"></span>
+            看书
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%9C%8B%E4%B9%A6/%E7%BB%AA%E8%AE%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    绪论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    分享会
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            分享会
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%86%E4%BA%AB%E4%BC%9A/2024-04-03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 04 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%86%E4%BA%AB%E4%BC%9A/2024-04-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-04-10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%86%E4%BA%AB%E4%BC%9A/2024-04-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-04-17
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    刷题
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            刷题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024DragonCtf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            2024DragonCtf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/2024DragonCtf/Debug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debug-x64dbg脱壳
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CISCN
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            CISCN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/2024-04-28/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    babyre
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/2024-04-29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 04 29
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/2024-04-30/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-04-30
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/%E3%80%902023%E5%88%9D%E8%B5%9B%E3%80%91ezbyte/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【2023初赛】ezbyte
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2021华南】ezre
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2021华南】ezre1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/%E3%80%90CISCN2022%E4%B8%9C%E5%8C%97%E3%80%91hana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2022东北】hana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/%E3%80%90CISCN2022%E5%88%9D%E8%B5%9B%E3%80%91secreeeet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2022初赛】secreeeet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/%E3%80%90CISCN2023%E5%88%9D%E8%B5%9B%E3%80%91PwSh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2023初赛】PwSh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/%E3%80%90CISCN2023%E5%88%9D%E8%B5%9B%E3%80%91flutter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2023初赛】flutter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_11" id="__nav_7_2_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            2024
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/2024/Go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/2024/gdb_debug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdb_debug
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/2024/wasm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wasm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/CISCN/2024/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    NSSCTF
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            NSSCTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/NSSCTF/SomeNSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Base64自定义表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/NSSCTF/doublegame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    双游戏
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/NSSCTF/ezvm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ezvm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%B7%E9%A2%98/NSSCTF/findxenny_smc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Findxenny smc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    博客的功能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            博客的功能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%8A%9F%E8%83%BD/LaTeX%20Math%20Support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    支持LaTeX Math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%8A%9F%E8%83%BD/Mermaid%20Diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    流程图语法支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%8A%9F%E8%83%BD/Text%20Formatting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文本格式化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    在用什么软件
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            在用什么软件
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9C%A8%E7%94%A8%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6/2024-04-28/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-04-28推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9C%A8%E7%94%A8%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6/2024-04-29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-04-29
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9C%A8%E7%94%A8%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6/2024-05-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-05-02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9C%A8%E7%94%A8%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6/2024-05-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-05-11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9C%A8%E7%94%A8%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6/2024-05-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-05-13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    算法
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95/TEA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TEA 算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95/%E8%8E%B7%E5%8F%96%E5%AF%86%E9%92%A5%E7%9A%84%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    获取密钥的奇技淫巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    赛事
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            赛事
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024D3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            2024D3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B5%9B%E4%BA%8B/2024D3/%E5%8D%9A%E5%BE%B7%E4%B9%8B%E9%97%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    博德之门
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024帕鲁杯
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            2024帕鲁杯
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B5%9B%E4%BA%8B/2024%E5%B8%95%E9%B2%81%E6%9D%AF/O2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    O2级别的优化？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B5%9B%E4%BA%8B/2024%E5%B8%95%E9%B2%81%E6%9D%AF/PyLu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    蟒蛇帕鲁
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024海洋杯
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            2024海洋杯
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B5%9B%E4%BA%8B/2024%E6%B5%B7%E6%B4%8B%E6%9D%AF/%E5%B8%95%E9%B2%81%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    帕鲁服务器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B5%9B%E4%BA%8B/2024%E6%B5%B7%E6%B4%8B%E6%9D%AF/%E8%8F%9C%E7%8B%97%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    菜狗工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B5%9B%E4%BA%8B/2024%E6%B5%B7%E6%B4%8B%E6%9D%AF/%E8%AE%A1%E7%AE%97%E5%99%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    逆向工具
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            逆向工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Android/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安卓逆向
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2Bflit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    美化C++函数名
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDB_LinuxOD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux平台的OD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDA的糕集使用寄巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    IDA错误手册
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    IDA错误手册
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#internal-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal errors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graceful-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graceful failures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graceful failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cannot-convert-to-microcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      cannot convert to microcode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-enough-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      not enough memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-basic-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      invalid basic block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#positive-sp-value-has-been-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      positive sp value has been found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prolog-analysis-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      prolog analysis failed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-analysis-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      switch analysis failed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exception-analysis-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception analysis failed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stack-frame-is-too-big" class="md-nav__link">
+    <span class="md-ellipsis">
+      stack frame is too big
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-variable-allocation-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      local variable allocation failed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-bit-functions-are-not-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      16-bit functions are not supported
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call-analysis-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      call analysis failed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-frame-is-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      function frame is wrong
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#undefined-or-illegal-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      undefined or illegal type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconsistent-database-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      inconsistent database information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrong-basic-type-sizes-in-compiler-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      wrong basic type sizes in compiler settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redecompilation-has-been-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      redecompilation has been required
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#could-not-compute-fpu-stack-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      could not compute fpu stack states
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-recursion-depth-reached-during-lvar-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      max recursion depth reached during lvar allocation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-would-overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      variables would overlap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partially-initialized-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      partially initialized variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#too-complex-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      too complex function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-license-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      no license available
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#only-32-bit-functions-can-be-decompiled-for-the-current-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      only 32-bit functions can be decompiled for the current database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#only-64-bit-functions-can-be-decompiled-for-the-current-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      only 64-bit functions can be decompiled for the current database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#already-decompiling-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      already decompiling a function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#far-memory-model-is-supported-only-for-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      far memory model is supported only for pc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-segments-cannot-be-decompiled" class="md-nav__link">
+    <span class="md-ellipsis">
+      special segments cannot be decompiled
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#too-big-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      too big function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bad-input-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      bad input range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-architecture-is-not-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      current architecture is not supported
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bad-instruction-in-the-delay-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      bad instruction in the delay slot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bugreports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bugreports
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDA%E4%B8%BB%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDA主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDA%E6%8F%92%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDA插件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pwntools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pwntools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%E5%B7%A5%E5%85%B7%E5%92%8C%E5%8C%85/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python工具和包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x64dbg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    x64dbg
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_12" id="__nav_12_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frida
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_12">
+            <span class="md-nav__icon md-icon"></span>
+            Frida
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Frida/Frida/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frida
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Frida/JS%20API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Frida/M1%20Welcome/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    M1 Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Frida/M2%20%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    M2 快速上手
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Frida/M3%20%E5%AE%89%E8%A3%85/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    M3 安装
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_13" id="__nav_12_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Angr
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_13">
+            <span class="md-nav__icon md-icon"></span>
+            Angr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../angr/Angr00-03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Angr00 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../angr/Angr04-06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Angr04
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_14" id="__nav_12_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    调试环境配置
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_14">
+            <span class="md-nav__icon md-icon"></span>
+            调试环境配置
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/MacOS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MacOS虚拟机
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/QemuSystem%E7%9A%84%E9%85%8D%E7%BD%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QemuSystem的配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#internal-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal errors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graceful-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graceful failures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graceful failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cannot-convert-to-microcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      cannot convert to microcode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-enough-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      not enough memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-basic-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      invalid basic block
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#positive-sp-value-has-been-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      positive sp value has been found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prolog-analysis-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      prolog analysis failed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-analysis-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      switch analysis failed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exception-analysis-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      exception analysis failed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stack-frame-is-too-big" class="md-nav__link">
+    <span class="md-ellipsis">
+      stack frame is too big
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-variable-allocation-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      local variable allocation failed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-bit-functions-are-not-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      16-bit functions are not supported
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call-analysis-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      call analysis failed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-frame-is-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      function frame is wrong
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#undefined-or-illegal-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      undefined or illegal type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconsistent-database-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      inconsistent database information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wrong-basic-type-sizes-in-compiler-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      wrong basic type sizes in compiler settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redecompilation-has-been-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      redecompilation has been required
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#could-not-compute-fpu-stack-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      could not compute fpu stack states
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-recursion-depth-reached-during-lvar-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      max recursion depth reached during lvar allocation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-would-overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      variables would overlap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partially-initialized-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      partially initialized variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#too-complex-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      too complex function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-license-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      no license available
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#only-32-bit-functions-can-be-decompiled-for-the-current-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      only 32-bit functions can be decompiled for the current database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#only-64-bit-functions-can-be-decompiled-for-the-current-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      only 64-bit functions can be decompiled for the current database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#already-decompiling-a-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      already decompiling a function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#far-memory-model-is-supported-only-for-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      far memory model is supported only for pc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-segments-cannot-be-decompiled" class="md-nav__link">
+    <span class="md-ellipsis">
+      special segments cannot be decompiled
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#too-big-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      too big function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bad-input-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      bad input range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-architecture-is-not-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      current architecture is not supported
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bad-instruction-in-the-delay-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      bad instruction in the delay slot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bugreports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bugreports
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ida">IDA错误手册<a class="headerlink" href="#ida" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>从 <a href="https://hex-rays.com//products/decompiler/manual/failures.shtml">Failures and troubleshooting (hex-rays.com)</a> 复制</p>
+</blockquote>
+<p>The following failure categories exist:</p>
+<ol>
+<li>a crash or access violation</li>
+<li><a href="https://hex-rays.com//products/decompiler/manual/failures.shtml#interr">internal consistency check failure (interr)</a></li>
+<li><a href="https://hex-rays.com//products/decompiler/manual/failures.shtml#grace">graceful failure to decompile a function</a></li>
+<li>incorrect output text</li>
+<li>inefficient/unclear/suboptimal output text</li>
+</ol>
+<p>The current focus is on producing a correct output for any correct function. The decompiler should not crash, fail, or produce incorrect output for a valid input. Please file a <a href="https://hex-rays.com//products/decompiler/manual/failures.shtml#report">bugreport</a> if this happens.</p>
+<p>The decompiler has an extensive set of internal checks and assertions. For example, it does not produce code which dereferences a "void*" pointer. On the other hand, the produced code is not supposed to be compilable and many compilers will complain about it. This is a deliberate choice of not making the output 100% compilable because the goal is not to recompile the code but to let humans analyze it faster.</p>
+<p>The decompiler uses some C++ constructs in the output text. Their use is restricted to constructs which cannot be represented in C (the most notable example is passing structures to functions by value).</p>
+<h3 id="internal-errors">Internal errors<a class="headerlink" href="#internal-errors" title="Permanent link">&para;</a></h3>
+<p>When the decompiler detects an internal inconsistency, it displays a message box with the error code. It also proposes you to send the database to the hex-rays.com server:</p>
+<p><img alt="" src="https://hex-rays.com//products/decompiler/manual/interr.gif" /></p>
+<p>It is really difficult (almost impossible) to reproduce bugs without a sample database, so please send it to the server. To facilitate things, the decompiler saves its internal state to the database, which is really handy if the error occurs after hours and hours of decompilation.</p>
+<p>It is impossible to decompile anything after an internal error. Please reload the database, or better, restart IDA.</p>
+<h3 id="graceful-failures">Graceful failures<a class="headerlink" href="#graceful-failures" title="Permanent link">&para;</a></h3>
+<p>When the decompiler gracefully fails on a function, it will display one of the following messages. In general, there is no need to file a bugreport about a failure except if you see that the error message should not be displayed.</p>
+<ul>
+<li><a href="#cannot-convert-to-microcode">#cannot convert to microcode</a></li>
+<li><a href="#not-enough-memory">#not enough memory</a></li>
+<li><a href="#invalid-basic-block">#invalid basic block</a></li>
+<li><a href="#positive-sp-value-has-been-found">#positive sp value has been found</a></li>
+<li><a href="#prolog-analysis-failed">#prolog analysis failed</a></li>
+<li><a href="#switch-analysis-failed">#switch analysis failed</a></li>
+<li><a href="#exception-analysis-failed">#exception analysis failed</a></li>
+<li><a href="#stack-frame-is-too-big">#stack frame is too big</a></li>
+<li><a href="#local-variable-allocation-failed">#local variable allocation failed</a></li>
+<li><a href="#16-bit-functions-are-not-supported">#16-bit functions are not supported</a></li>
+<li><a href="#call-analysis-failed">#call analysis failed</a></li>
+<li><a href="#function-frame-is-wrong">#function frame is wrong</a></li>
+<li><a href="#undefined-or-illegal-type">#undefined or illegal type</a></li>
+<li><a href="#inconsistent-database-information">#inconsistent database information</a></li>
+<li><a href="#wrong-basic-type-sizes-in-compiler-settings">#wrong basic type sizes in compiler settings</a></li>
+<li><a href="#redecompilation-has-been-required">#redecompilation has been required</a></li>
+<li><a href="#could-not-compute-fpu-stack-states">#could not compute fpu stack states</a></li>
+<li><a href="#max-recursion-depth-reached-during-lvar-allocation">#max recursion depth reached during lvar allocation</a></li>
+<li><a href="#variables-would-overlap">#variables would overlap</a></li>
+<li><a href="#partially-initialized-variable">#partially initialized variable</a></li>
+<li><a href="#too-complex-function">#too complex function</a></li>
+<li><a href="#only-32-bit-functions-can-be-decompiled-for-the-current-database">#only 32-bit functions can be decompiled for the current database</a></li>
+<li><a href="#only-64-bit-functions-can-be-decompiled-for-the-current-database">#only 64-bit functions can be decompiled for the current database</a></li>
+<li><a href="#already-decompiling-a-function">#already decompiling a function</a></li>
+<li><a href="#far-memory-model-is-supported-only-for-pc">#far memory model is supported only for pc</a></li>
+<li><a href="#special-segments-cannot-be-decompiled">#special segments cannot be decompiled</a></li>
+<li><a href="#too-big-function">#too big function</a></li>
+<li><a href="#bad-input-ranges">#bad input ranges</a></li>
+<li><a href="#current-architecture-is-not-supported">#current architecture is not supported</a></li>
+<li><a href="#bad-instruction-in-the-delay-slot">#bad instruction in the delay slot</a></li>
+</ul>
+<p>Please read the <a href="https://hex-rays.com//products/decompiler/manual/failures.shtml#trouble">Troubleshooting</a> section about the possible actions.</p>
+<h4 id="cannot-convert-to-microcode">cannot convert to microcode<a class="headerlink" href="#cannot-convert-to-microcode" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>This error means that the decompiler could not translate an instruction at the specified address into microcode. Please check the instruction and its length. If it looks like a regular instruction used in the compiler generated code and its length is correct, file a bugreport.</p>
+</blockquote>
+<h4 id="not-enough-memory">not enough memory<a class="headerlink" href="#not-enough-memory" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>The error message is self-explanatory. While it should not happen very often, it still can be seen on functions with huge stacks. No need to report this bug. Hopefully the next version will handle functions with huge stack more efficiently.</p>
+<p>Please restart IDA after this error message.</p>
+</blockquote>
+<h4 id="invalid-basic-block">invalid basic block<a class="headerlink" href="#invalid-basic-block" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>This error means that at the specified address there is a basic block, which does not end properly. For example, it jumps out of the function, ends with a non-instruction, or simply contains garbage. If you can, try to correct the situation by modifying the function boundaries, creating instructions, or playing with function tails. Usually this error happens with malformed functions.</p>
+<p>If the error happens because of a call, which does not return, marking the called function as "noret" will help. If the call is indirect, adding a cross reference to a "noret" function will help too.</p>
+<p>If this error occurs on a database created by an old version of IDA, try to reanalyze the program before decompiling it. In general, it is better to use the latest version of IDA to create the databases for decompilation.</p>
+<p>Unrecognized table jumps may lead to this failure too.</p>
+</blockquote>
+<h4 id="positive-sp-value-has-been-found">positive sp value has been found<a class="headerlink" href="#positive-sp-value-has-been-found" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>The stack pointer at the specified address is higher than the initial stack pointer. Functions behaving so strangely cannot be decompiled. If you see that the stack pointer values are incorrect, modify them with the <strong>Alt-K (Edit, Functions, Change stack pointer)</strong> command in IDA.</p>
+</blockquote>
+<h4 id="prolog-analysis-failed">prolog analysis failed<a class="headerlink" href="#prolog-analysis-failed" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Analysis of the function prolog has failed. Currently there is not much you can do but you will not see this error very often. The decompiler will try to produce code with prolog instructions rather than stopping because of this failure.</p>
+</blockquote>
+<h4 id="switch-analysis-failed">switch analysis failed<a class="headerlink" href="#switch-analysis-failed" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>The switch idiom (an indirect jump) at the specified address could not be analyzed. You may specify the switch idiom manually using <strong>Edit, Other, Specify switch idiom</strong>.</p>
+<p>If this error occurs on a database created by an old version of IDA, try to delete the offending instruction and recreate it. Doing so will reanalyze it and might fix the error because newer versions of IDA handle switches much better than older versions.</p>
+</blockquote>
+<h4 id="exception-analysis-failed">exception analysis failed<a class="headerlink" href="#exception-analysis-failed" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>This error message should not occur because the current version will happily decompile any function and just ignore any exception handlers and related code.</p>
+</blockquote>
+<h4 id="stack-frame-is-too-big">stack frame is too big<a class="headerlink" href="#stack-frame-is-too-big" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Since the stack analysis requires lots of memory, the decompiler will refuse to handle any function with the unaliased stack bigger than 1 MB.</p>
+</blockquote>
+<h4 id="local-variable-allocation-failed">local variable allocation failed<a class="headerlink" href="#local-variable-allocation-failed" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>This error message means that the decompiler could not allocate local variables with the registers and stack locations. You will see this error message only if you have enabled HO_IGNORE_OVERLAPS in the <a href="https://hex-rays.com//products/decompiler/manual/config.shtml#HO_IGNORE_OVERLAPS">configuration file</a>. If overlapped variables are allowed in the output, they are displayed in red.</p>
+<p>Please check the prototypes of all involved functions, including the current one. Variables types and definitions may cause this error too.</p>
+<p>Updating the function stack frame and creating correct stack variables too may help solve the problem.</p>
+<p>If you got this error after some manipulations with the function type or variable types, you may reset the information about the current function (<a href="https://hex-rays.com//products/decompiler/manual/interactive.shtml#07">Edit, Other, Reset decompiler information</a>) and start afresh.</p>
+</blockquote>
+<h4 id="16-bit-functions-are-not-supported">16-bit functions are not supported<a class="headerlink" href="#16-bit-functions-are-not-supported" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>The message text says it all. While the decompiler itself can be fine tuned to decompile 16-bit code, this is not a priority.</p>
+</blockquote>
+<h4 id="call-analysis-failed">call analysis failed<a class="headerlink" href="#call-analysis-failed" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>This is the most painful error message but it is also something you can do something about. In short, this message means that the decompiler could not determine the calling convention and the call parameters. If this is a direct non-variadic call, you can fix it by specifying the callee type: just jump to the callee and hit <strong>Y</strong> to specify the type. For variadic functions too it is a good idea to specify the type, but the call analysis could still fail because the decompiler has to find out the actual number of arguments in the call. We would recommend to start by checking the stack pointer in the whole function. Get rid of any incorrect stack pointer values. Second, check the types of all called functions. If the type of a called function is wrong, it can interfere with other calls and lead to a failure. Here is a small example:</p>
+<p>push eax </p>
+<p>push edx </p>
+<p>push eax </p>
+<p>call f1 </p>
+<p>call f2</p>
+<p>If f1 is defined as a <strong>__stdcall</strong> function of 3 arguments, and f2 is a function of 1 argument, the call analysis will fail because we need in total 4 arguments and only 3 arguments are pushed onto the stack.</p>
+<p>If the error occurs on an indirect call, please <a href="https://hex-rays.com/products/ida/support/idadoc/1601.shtml">specify the operand type</a> of the call instruction. Also, <a href="https://hex-rays.com/products/ida/support/idadoc/592.shtml">adding an xref</a> to a function of the desired type from the call instruction will work. The decompiler will use the type of the referenced function.</p>
+<p>If all input types are correct and the stack pointer values are correct but the decompiler still fails, please file a bugreport.</p>
+</blockquote>
+<h4 id="function-frame-is-wrong">function frame is wrong<a class="headerlink" href="#function-frame-is-wrong" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>This is a rare error message. It means that something is wrong with the function stack frame. The most probable cause is that the return address area is missing in the frame or the function farness (far/near) does not match it.</p>
+</blockquote>
+<h4 id="undefined-or-illegal-type">undefined or illegal type<a class="headerlink" href="#undefined-or-illegal-type" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>This error can occur if a reference to a named type (a typedef) is made but the type is undefined. The most common case is when a type library (like vc6win.til) is unloaded. This may invalidate all references to all types defined in it.</p>
+<p>This error also occurs when a type definition is illegal or incorrect. To fix an undefined ordinal type, open the local types windows (Shift-F1) and redefine the missing type.</p>
+</blockquote>
+<h4 id="inconsistent-database-information">inconsistent database information<a class="headerlink" href="#inconsistent-database-information" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Currently this error means that the function chunk information is incorrect. Try to redefine (delete and recreate) the function.</p>
+</blockquote>
+<h4 id="wrong-basic-type-sizes-in-compiler-settings">wrong basic type sizes in compiler settings<a class="headerlink" href="#wrong-basic-type-sizes-in-compiler-settings" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Some basic type sizes are incorrect. The decompiler requires that</p>
+<ul>
+<li>sizeof(int) == 4</li>
+<li>sizeof(enum) == 4</li>
+</ul>
+<p>Please check the type sizes in the Options, Compiler dialog box and modify them if they are incorrect.</p>
+<p>Also ensure that the correct memory model is selected: "near data, near code".</p>
+<p>Finally, the pointer size must be:</p>
+<ul>
+<li>for 32-bit applications use "near 32bit, far 48bit"</li>
+<li>for 64-bit applications use "64bit".
+</li>
+</ul>
+</blockquote>
+<h4 id="redecompilation-has-been-required">redecompilation has been required<a class="headerlink" href="#redecompilation-has-been-required" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>This is an internal error code and should not be visible to the end user. If it still gets displayed, please file a bugreport.</p>
+</blockquote>
+<h4 id="could-not-compute-fpu-stack-states">could not compute fpu stack states<a class="headerlink" href="#could-not-compute-fpu-stack-states" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>The decompiler failed to trace the FPU stack pointer. Please check the called function types, this is the only thing available for the moment. We will introduce workarounds and corrective commands in the future. For more information about floating point support, please follow <a href="https://hex-rays.com//products/decompiler/manual/fpu.shtml">link</a>.</p>
+</blockquote>
+<h4 id="max-recursion-depth-reached-during-lvar-allocation">max recursion depth reached during lvar allocation<a class="headerlink" href="#max-recursion-depth-reached-during-lvar-allocation" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Please file a bugreport, normally this error message should not be displayed.</p>
+</blockquote>
+<h4 id="variables-would-overlap">variables would overlap<a class="headerlink" href="#variables-would-overlap" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>This is a variant of the <a href="https://hex-rays.com//products/decompiler/manual/failures.shtml#09">variable allocation failure</a> error. You will see this error message only if you have enabled HO_IGNORE_OVERLAPS in the <a href="https://hex-rays.com//products/decompiler/manual/config.shtml#HO_IGNORE_OVERLAPS">configuration file</a>. If overlapped variables are allowed in the output, they are displayed in red.</p>
+</blockquote>
+<h4 id="partially-initialized-variable">partially initialized variable<a class="headerlink" href="#partially-initialized-variable" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>A partially initialized variable has been detected. Wrong stack trace can induce this error, please check the stack pointer.</p>
+</blockquote>
+<h4 id="too-complex-function">too complex function<a class="headerlink" href="#too-complex-function" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>The function is too big or too complex. Unfortunately there is nothing the user can do to avoid this error.</p>
+</blockquote>
+<h4 id="no-license-available">no license available<a class="headerlink" href="#no-license-available" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>IDA could not locate your decompiler license.</p>
+</blockquote>
+<h4 id="only-32-bit-functions-can-be-decompiled-for-the-current-database">only 32-bit functions can be decompiled for the current database<a class="headerlink" href="#only-32-bit-functions-can-be-decompiled-for-the-current-database" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>This error message will not currently be displayed.</p>
+</blockquote>
+<h4 id="only-64-bit-functions-can-be-decompiled-for-the-current-database">only 64-bit functions can be decompiled for the current database<a class="headerlink" href="#only-64-bit-functions-can-be-decompiled-for-the-current-database" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>IDA64 can currently decompile only 64-bit functions. To decompile 32-bit functions please use IDA32.</p>
+</blockquote>
+<h4 id="already-decompiling-a-function">already decompiling a function<a class="headerlink" href="#already-decompiling-a-function" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>An attempt to decompile a function while decompiling another function has been detected. Currently only one function can be decompiled at once.</p>
+</blockquote>
+<h4 id="far-memory-model-is-supported-only-for-pc">far memory model is supported only for pc<a class="headerlink" href="#far-memory-model-is-supported-only-for-pc" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Please check the data and code memory models in the Options, Compiler dialog. If necessary, reset them to 'near' models.</p>
+</blockquote>
+<h4 id="special-segments-cannot-be-decompiled">special segments cannot be decompiled<a class="headerlink" href="#special-segments-cannot-be-decompiled" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>The current function belongs to a special segment (e.g. "extern" segment). Such segments do not contain any real code, they contain just pointers to imported functions. The function body is located in some other dynamic library. Therefore, there is nothing that we could decompile.</p>
+</blockquote>
+<h4 id="too-big-function">too big function<a class="headerlink" href="#too-big-function" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>The current function is bigger than the maximal permitted size. The maximal permitted size is specified by the <a href="https://hex-rays.com//products/decompiler/manual/config.shtml#MAX_FUNCSIZE">MAX_FUNCSIZE</a> configuration parameter.</p>
+</blockquote>
+<h4 id="bad-input-range">bad input range<a class="headerlink" href="#bad-input-range" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>The specified input ranges are wrong. The range vector cannot be empty. The first entry must point to an instruction. Ranges may not overlap. Ranges may not start or end in the middle of an item.</p>
+</blockquote>
+<h4 id="current-architecture-is-not-supported">current architecture is not supported<a class="headerlink" href="#current-architecture-is-not-supported" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>The current processor bitness, endianness, or ABI settings in the compiler options are not acceptable. See the current ABI limitations <a href="https://hex-rays.com//products/decompiler/manual/limit.shtml">here</a>.</p>
+</blockquote>
+<h4 id="bad-instruction-in-the-delay-slot">bad instruction in the delay slot<a class="headerlink" href="#bad-instruction-in-the-delay-slot" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Branches and jumps are not allowed in a delay slot. Such instructions signal an exception and cannot be decompiled.</p>
+</blockquote>
+<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<p>When the decompiler fails, please check the following things:</p>
+<ul>
+<li>the function boundaries. There should not be any wild branches jumping out of function to nowhere. The function should end properly, with a return instruction or a jump to the beginning of another function. If it ends after a call to a non-returning function, the callee must be marked as a <strong>non-returning</strong> function.</li>
+<li>the stack pointer values. Use the <strong>Options, General, Stack pointer</strong> command to display them in a column just after the addresses in the disassembly view. If the stack pointer value is incorrect at any location of the function, the decompilation may fail. To correct the stack pointer values, use the <strong>Edit, Functions, Change stack pointer</strong> command.</li>
+<li>the stack variables. Open the stack frame window with the <strong>Edit, Functions, Stack variables...</strong> command and verify that the definitions make sense. In some cases creating a big array or a structure variable may help.</li>
+<li>the function type. The calling convention, the numbers and the types of the arguments must be correct. If the function type is not specified, the decompiler will try to deduce it. In some rare cases, it will fail. If the function expects its input in non-standard registers or returns the result in a non-standard register, you will have to inform the decompiler about it. Currently it makes a good guess about the non-standard input locations but cannot handle non-standard return locations.</li>
+<li>the types of the called functions and referenced data items. A wrong type can wreak havoc very easily. Use the <strong>F</strong> hotkey to display the type of the current item in the message window. For functions, position the cursor on the beginning and hit <strong>F</strong>. If the type is incorrect, modify it with <strong>Edit, Functions, Set function type</strong> (the hotkey is <strong>Y</strong>). This command works not only for functions but also for data and structure members.</li>
+<li>If a type refers to an undefined type, the decompilation might fail.</li>
+<li>use a database created by the latest version of IDA.</li>
+</ul>
+<p>In some cases the output may contain variables in red. It means that local variable allocation has failed. Please read the page about <a href="https://hex-rays.com//products/decompiler/manual/overvars.shtml">overlapped variables</a> for the possible corrective methods.</p>
+<p>The future versions will have more corrective commands but we have to understand what commands we need.</p>
+<h3 id="bugreports">Bugreports<a class="headerlink" href="#bugreports" title="Permanent link">&para;</a></h3>
+<p>To be useful, the bugreport must contain enough information to reproduce the bug. The <a href="https://hex-rays.com//products/decompiler/manual/interactive.shtml#08">send database</a> command is the preferred way of sending bugreports because it saves all relevant information to the database. Some bugs are impossible to reproduce without this command.</p>
+<p>The database is sent in the compressed form to save the bandwidth. An SSL connection is used for the transfer.</p>
+<p>If your database/input file is confidential and you cannot send it, try to find a similar file to illustrate the problem. Thank you.</p>
+<p>We handle your databases confidentially (as always in the past).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

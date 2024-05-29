@@ -1,0 +1,3765 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E3%80%902023%E5%88%9D%E8%B5%9B%E3%80%91ezbyte/">
+      
+      
+        <link rel="next" href="../%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre1/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>【CISCN2021华南】ezre - oldkingOK 的 blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ciscn2021ezre" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="oldkingOK 的 blog" class="md-header__button md-logo" aria-label="oldkingOK 的 blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            oldkingOK 的 blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              【CISCN2021华南】ezre
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="oldkingOK 的 blog" class="md-nav__button md-logo" aria-label="oldkingOK 的 blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    oldkingOK 的 blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    你好~
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    环境配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Topic 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Topic 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Topic%201/Note%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Note 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Topic%201/Note%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Note 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hi~
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/hello/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/reverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reverse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    一些知识点
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            一些知识点
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/Compile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    编译
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/Elang/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    易语言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/FirmwareReverse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    固件逆向
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/Linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux的一些知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/ModAndDiv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    编译器对取余和除法运算的优化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python沙箱逃逸
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/PythonMD5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 版本差异导致的MD5不同
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/Shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    壳
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/SomeAsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见疑难杂汇编指令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/WebAssembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebAssembly逆向
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/%E5%8F%8D%E8%B0%83%E8%AF%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    反反调试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_12" id="__nav_5_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    操作系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_12">
+            <span class="md-nav__icon md-icon"></span>
+            操作系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_12_1" id="__nav_5_12_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HIT课程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_12_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_12_1">
+            <span class="md-nav__icon md-icon"></span>
+            HIT课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/HIT%E8%AF%BE%E7%A8%8B/L1.%E4%BB%80%E4%B9%88%E6%98%AF%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L1.什么是操作系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/HIT%E8%AF%BE%E7%A8%8B/L2.%E6%8F%AD%E5%BC%80%E9%92%A2%E7%90%B4%E7%9A%84%E7%9B%96%E5%AD%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L2.揭开钢琴的盖子
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_12_2" id="__nav_5_12_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    看书
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_12_2">
+            <span class="md-nav__icon md-icon"></span>
+            看书
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%9C%8B%E4%B9%A6/%E7%BB%AA%E8%AE%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    绪论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    分享会
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            分享会
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%88%86%E4%BA%AB%E4%BC%9A/2024-04-03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 04 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%88%86%E4%BA%AB%E4%BC%9A/2024-04-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-04-10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%88%86%E4%BA%AB%E4%BC%9A/2024-04-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-04-17
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    刷题
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            刷题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024DragonCtf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            2024DragonCtf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024DragonCtf/Debug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debug-x64dbg脱壳
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CISCN
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            CISCN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024-04-28/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    babyre
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024-04-29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 04 29
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024-04-30/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-04-30
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%80%902023%E5%88%9D%E8%B5%9B%E3%80%91ezbyte/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【2023初赛】ezbyte
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    【CISCN2021华南】ezre
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2021华南】ezre
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      经常调着调着程序停了
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="经常调着调着程序停了">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pfunc0-0-v8-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      当 pfunc0 = 0 或 v8 = 0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      改改类型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      大概知道了，有以下难点：
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2021华南】ezre1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%80%90CISCN2022%E4%B8%9C%E5%8C%97%E3%80%91hana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2022东北】hana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%80%90CISCN2022%E5%88%9D%E8%B5%9B%E3%80%91secreeeet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2022初赛】secreeeet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%80%90CISCN2023%E5%88%9D%E8%B5%9B%E3%80%91PwSh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2023初赛】PwSh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%80%90CISCN2023%E5%88%9D%E8%B5%9B%E3%80%91flutter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    【CISCN2023初赛】flutter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_11" id="__nav_7_2_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            2024
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024/Go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024/gdb_debug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdb_debug
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024/wasm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wasm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2024/where/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    NSSCTF
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            NSSCTF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NSSCTF/SomeNSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Base64自定义表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NSSCTF/doublegame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    双游戏
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NSSCTF/ezvm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ezvm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NSSCTF/findxenny_smc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Findxenny smc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    博客的功能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            博客的功能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%8A%9F%E8%83%BD/LaTeX%20Math%20Support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    支持LaTeX Math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%8A%9F%E8%83%BD/Mermaid%20Diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    流程图语法支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%8A%9F%E8%83%BD/Text%20Formatting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文本格式化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    在用什么软件
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            在用什么软件
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9C%A8%E7%94%A8%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6/2024-04-28/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-04-28推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9C%A8%E7%94%A8%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6/2024-04-29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-04-29
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9C%A8%E7%94%A8%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6/2024-05-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-05-02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9C%A8%E7%94%A8%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6/2024-05-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-05-11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%9C%A8%E7%94%A8%E4%BB%80%E4%B9%88%E8%BD%AF%E4%BB%B6/2024-05-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024-05-13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    算法
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%AE%97%E6%B3%95/TEA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TEA 算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%AE%97%E6%B3%95/%E8%8E%B7%E5%8F%96%E5%AF%86%E9%92%A5%E7%9A%84%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    获取密钥的奇技淫巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    赛事
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            赛事
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024D3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            2024D3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%B5%9B%E4%BA%8B/2024D3/%E5%8D%9A%E5%BE%B7%E4%B9%8B%E9%97%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    博德之门
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024帕鲁杯
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            2024帕鲁杯
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%B5%9B%E4%BA%8B/2024%E5%B8%95%E9%B2%81%E6%9D%AF/O2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    O2级别的优化？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%B5%9B%E4%BA%8B/2024%E5%B8%95%E9%B2%81%E6%9D%AF/PyLu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    蟒蛇帕鲁
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024海洋杯
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            2024海洋杯
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%B5%9B%E4%BA%8B/2024%E6%B5%B7%E6%B4%8B%E6%9D%AF/%E5%B8%95%E9%B2%81%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    帕鲁服务器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%B5%9B%E4%BA%8B/2024%E6%B5%B7%E6%B4%8B%E6%9D%AF/%E8%8F%9C%E7%8B%97%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    菜狗工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%B5%9B%E4%BA%8B/2024%E6%B5%B7%E6%B4%8B%E6%9D%AF/%E8%AE%A1%E7%AE%97%E5%99%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    逆向工具
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            逆向工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/Android/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安卓逆向
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/C%2B%2Bflit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    美化C++函数名
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/EDB_LinuxOD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux平台的OD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/IDA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDA的糕集使用寄巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/IDA_Failure_Manual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDA错误手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/IDA%E4%B8%BB%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDA主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/IDA%E6%8F%92%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDA插件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/Pwntools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pwntools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/Python%E5%B7%A5%E5%85%B7%E5%92%8C%E5%8C%85/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python工具和包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/x64dbg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    x64dbg
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_12" id="__nav_12_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frida
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_12">
+            <span class="md-nav__icon md-icon"></span>
+            Frida
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/Frida/Frida/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frida
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/Frida/JS%20API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/Frida/M1%20Welcome/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    M1 Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/Frida/M2%20%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    M2 快速上手
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/Frida/M3%20%E5%AE%89%E8%A3%85/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    M3 安装
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_13" id="__nav_12_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Angr
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_13">
+            <span class="md-nav__icon md-icon"></span>
+            Angr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/angr/Angr00-03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Angr00 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/angr/Angr04-06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Angr04
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_14" id="__nav_12_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    调试环境配置
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_14">
+            <span class="md-nav__icon md-icon"></span>
+            调试环境配置
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/MacOS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MacOS虚拟机
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7/%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/QemuSystem%E7%9A%84%E9%85%8D%E7%BD%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QemuSystem的配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      经常调着调着程序停了
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="经常调着调着程序停了">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pfunc0-0-v8-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      当 pfunc0 = 0 或 v8 = 0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      改改类型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      大概知道了，有以下难点：
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ciscn2021ezre">【CISCN2021华南】ezre<a class="headerlink" href="#ciscn2021ezre" title="Permanent link">&para;</a></h1>
+<p>ELF64
+    操作系统: Ubuntu Linux(20.04,ABI: 3.2.0)[AMD64, 64 位, EXEC]
+    编译器: GCC(9.3.0)
+    语言: C/C++</p>
+<p><a href="https://www.nssctf.cn/problem/2457">CISCN 2021华南 ezre | NSSCTF</a></p>
+<p><a href="https://www.cnblogs.com/heixiang/p/10988992.html">ptrace函数深入分析 - 黑箱 - 博客园 (cnblogs.com)</a></p>
+<p>ps：右键可以直接自动生成结构体</p>
+<p><img alt="image-20240515115626952.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240515115626952.png" width="500" /></p>
+<p><a href="https://zhuanlan.zhihu.com/p/653385264">威力巨大的系统调用——ptrace - 知乎 (zhihu.com)</a></p>
+<p>神奇，当<code>v4=0</code>的时候，是子进程，<code>v4!=0</code> 就是父进程</p>
+<blockquote>
+<p>wait ()会<strong>暂时停止目前进程的执行</strong>, 直到有信号来到或子进程结束</p>
+</blockquote>
+<h2 id="_1">经常调着调着程序停了<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20240515194216273.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240515194216273.png" /></p>
+<p>在开头定了个闹钟，改大一点就行</p>
+<p>是一个虚拟机</p>
+<table>
+<thead>
+<tr>
+<th>地址</th>
+<th>v8</th>
+<th>作用</th>
+<th>对应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>401780h</td>
+<td>3</td>
+<td>未知</td>
+<td></td>
+</tr>
+<tr>
+<td>qword0 = 0</td>
+<td>0</td>
+<td>跳转base到q2</td>
+<td>nop</td>
+</tr>
+<tr>
+<td>#### case 2 和 case 4 是一个相反的操作</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>2是：ret
+跳转到 <code>base = v13[...]</code> <code>v12 += 8</code></p>
+<div class="highlight"><pre><span></span><code><span class="nf">pop</span><span class="w"> </span><span class="no">loc1</span>
+<span class="nf">jmp</span><span class="w"> </span><span class="no">loc1</span>
+</code></pre></div>
+<p>4是：call
+<code>v13[...] = base-&gt;q0</code> ，
+<code>__iptr++</code> 
+<code>v12 -= 8</code>
+<code>base = base-&gt; q1</code></p>
+<div class="highlight"><pre><span></span><code><span class="nf">push</span><span class="w"> </span><span class="no">loc1</span>
+<span class="nf">jmp</span><span class="w"> </span><span class="no">loc2</span>
+</code></pre></div>
+<h4 id="pfunc0-0-v8-0">当 pfunc0 = 0 或 v8 = 0<a class="headerlink" href="#pfunc0-0-v8-0" title="Permanent link">&para;</a></h4>
+<p>都像是jmp</p>
+<div class="highlight"><pre><span></span><code><span class="nf">pfunc0</span><span class="w"> </span><span class="err">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">-</span><span class="err">&gt;</span><span class="w"> </span><span class="no">jmp</span><span class="w"> </span><span class="no">base-</span><span class="err">&gt;</span><span class="no">q1</span>
+<span class="nf">v8</span><span class="w"> </span><span class="err">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">-</span><span class="err">&gt;</span><span class="w"> </span><span class="no">jmp</span><span class="w"> </span><span class="no">base-</span><span class="err">&gt;</span><span class="no">q0</span>
+<span class="nf">v8</span><span class="w"> </span><span class="err">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">-</span><span class="err">&gt;</span><span class="w"> </span><span class="no">jmp</span><span class="w"> </span><span class="no">base-</span><span class="err">&gt;</span><span class="no">q1</span>
+</code></pre></div>
+<h3 id="_2">改改类型<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>ptrace(PTRACE_GETREGS, a1, 0LL, v10);
+</code></pre></div>
+<p><code>PTRACE_PEEKDATA</code> </p>
+<p>这里的v10默认是<code>char v10[128]</code> 128个8位=16个64位，应该是 <code>__int64 v10[16]</code></p>
+<p>通过chatgpt，给出了v10的结构体：user_regs_struct</p>
+<p>然后查源码，得到下面结构体，导入IDA（不能重名，所以用ok）</p>
+<div class="highlight"><pre><span></span><code>struct ok_regs_struct
+{
+   unsigned long long int r15;
+   unsigned long long int r14;
+   unsigned long long int r13;
+   unsigned long long int r12;
+   unsigned long long int rbp;
+   unsigned long long int rbx;
+   unsigned long long int r11;
+   unsigned long long int r10;
+   unsigned long long int r9;
+   unsigned long long int r8;
+   unsigned long long int rax;
+   unsigned long long int rcx;
+   unsigned long long int rdx;
+   unsigned long long int rsi;
+   unsigned long long int rdi;
+   unsigned long long int orig_rax;
+   unsigned long long int rip;
+   unsigned long long int cs;
+   unsigned long long int eflags;
+   unsigned long long int rsp;
+   unsigned long long int ss;
+   unsigned long long int fs_base;
+   unsigned long long int gs_base;
+   unsigned long long int ds;
+   unsigned long long int es;
+   unsigned long long int fs;
+   unsigned long long int gs;
+};
+</code></pre></div>
+<p>很多东西就很清晰了，比如</p>
+<p><img alt="image-20240515215407193.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240515215407193.png" /></p>
+<p>这里就是让子进程跳转到 <code>base-&gt;q1</code> ，然后把 <code>base-&gt;q3</code> push到子进程的栈中，就是 <code>call</code> </p>
+<p>第一次3就是 <code>puts</code> ，正确</p>
+<p>这里的 <code>base-&gt;q3</code> 是 <code>4012CB</code> </p>
+<p><img alt="image-20240515215746028.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240515215746028.png" /></p>
+<p><img alt="image-20240515220135037.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240515220135037.png" /></p>
+<p>CC 就是 <code>int 3</code> 用于触发异常的</p>
+<h2 id="_3">大概知道了，有以下难点：<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>控制流平坦化——由父进程统一进行代码流程分发</li>
+<li>虚拟机分析——jmp、call、push、pop均由父进程操作</li>
+<li>多线程交互——子进程的部分栈操作，用父进程模拟</li>
+</ol>
+<p>目前想到的方案是用frida hook每一个流程，然后把程序的流程用正常的汇编表示</p>
+<h1 id="frida">Frida学习<a class="headerlink" href="#frida" title="Permanent link">&para;</a></h1>
+<p>官方仓库：<a href="https://github.com/frida/frida">frida/frida: Clone this repo to build Frida (github.com)</a></p>
+<p>官方文档：<a href="https://frida.re/docs/quickstart/">Quick-start guide | Frida • A world-class dynamic instrumentation toolkit</a></p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>frida-tools<span class="w"> </span><span class="c1"># CLI tools</span>
+pip<span class="w"> </span>install<span class="w"> </span>frida<span class="w">       </span><span class="c1"># Python bindings</span>
+npm<span class="w"> </span>install<span class="w"> </span>frida<span class="w">       </span><span class="c1"># Node.js bindings</span>
+</code></pre></div>
+<p><a href="https://github.com/frida/frida/releases/tag/16.2.1">Release Frida 16.2.1 · frida/frida (github.com)</a></p>
+<p>下载 frida-server-16.2.1-linux-x86_64.xz</p>
+<p>如何hook函数：<a href="https://frida.re/docs/functions/">Functions | Frida • A world-class dynamic instrumentation toolkit</a></p>
+<div class="highlight"><pre><span></span><code>-f TARGET # 运行并附加
+</code></pre></div>
+<p><a href="https://blog.csdn.net/qq_36535153/article/details/120282554">frida 常用的一些demo 打印native 函数的堆栈 参数,返回值 等_frida 打印调用堆栈-CSDN博客</a></p>
+<p>突然发现，父进程的堆栈操作和子进程没关系，只有 <code>v10.rip</code> 的作用最大，只用分析 <code>call</code> 和 <code>jmp</code> 就行</p>
+<div class="highlight"><pre><span></span><code>frida<span class="w"> </span>-f<span class="w"> </span>ezre<span class="w"> </span>-l<span class="w"> </span>frida_hi.js<span class="w"> </span>-o<span class="w"> </span>frida_hi.log
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// frida插桩，每执行到 0x401AA5 一次就输出一次hi</span>
+<span class="nx">Interceptor</span><span class="p">.</span><span class="nx">attach</span><span class="p">(</span><span class="nx">ptr</span><span class="p">(</span><span class="s2">&quot;0x401AA5&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">onEnter</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;call &quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">.</span><span class="nx">rax</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>❯ frida -f ezre -l frida_hi.js -o frida_hi.log
+     ____
+    / _  |   Frida 16.2.1 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    &gt; _  |   Commands:
+   /_/ |_|       help      -&gt; Displays the help system
+   . . . .       object?   -&gt; Display information about &#39;object&#39;
+   . . . .       exit/quit -&gt; Exit
+   . . . .
+   . . . .   More info at https://frida.re/docs/home/
+   . . . .
+   . . . .   Connected to Local System (id=local)
+Spawned `ezre`. Resuming main thread!                                   
+Input your flag:
+call  0x4010c0
+call  0x4010f0
+[Local::ezre ]-&gt; Error!
+call  0x4010c0
+Process terminated
+[Local::ezre ]-&gt;
+WARNING: your terminal doesn&#39;t support cursor position requests (CPR).
+
+Thank you for using Frida!
+</code></pre></div>
+<p>看了下， <code>0x4010c0</code> 是 <code>puts</code> ， <code>0x4010f0</code> 是 <code>read</code> ，正确的</p>
+<p>程序会由于没有read到东西而死循环+停下来，所以这里看看能不能hook read函数</p>
+<p>不太好hook，因为read函数执行逻辑发生在子进程，只能patch了</p>
+<ul>
+<li><a href="https://www.52pojie.cn/thread-1843175-1-1.html">使用frida来spawn Fork 的子进程 - 『软件调试区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></li>
+<li><a href="https://github.com/frida/frida-python/blob/main/examples/child_gating.py">frida-python/examples/child_gating.py at main · frida/frida-python (github.com)</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/101401252">FRIDA-API使用篇：rpc、Process、Module、Memory使用方法及示例 - 知乎 (zhihu.com)</a></li>
+<li><a href="https://learnfrida.info/basic_usage/">Frida basics - Frida HandBook (learnfrida.info)</a></li>
+</ul>
+<p>找到了hook子进程的资料，成功hook到read</p>
+<div class="highlight"><pre><span></span><code>on read( 0x0 , 0x7ffed821f9a0 , 0x2b )
+</code></pre></div>
+<p>长度是0x2b - 43，0x0应该是标准输入流</p>
+<div class="highlight"><pre><span></span><code>buf_ptr = ptr(args[1]); // 往 read 的 buf 中写入数据
+buf_ptr.writeUtf8String(&quot;aaaaaaaa&quot;);
+</code></pre></div>
+<p>打印指定地址的内存状况</p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hexdump</span><span class="p">(</span><span class="nx">ptr</span><span class="p">(</span><span class="mh">0x401123</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">offset</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">length</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">header</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">ansi</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">}));</span>
+</code></pre></div>
+<p>发现运行的时候，这部分代码被修改了</p>
+<p><img alt="image-20240516100739184.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240516100739184.png" /></p>
+<p><img alt="image-20240516100824144.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240516100824144.png" /></p>
+<p>直接把修改后的bytes patch之后，汇编是：</p>
+<p><img alt="image-20240516100904870.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240516100904870.png" /></p>
+<p>直接被改成jmp了，得想办法直接ret</p>
+<h2 id="_4">还有一个办法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>在call read 之前hook一下，拿到日志，然后正常运行程序，理论上来说会卡在read，这时候再hook一下，就可以拿到之后的日志了</p>
+<div class="highlight"><pre><span></span><code>frida<span class="w"> </span>-l<span class="w"> </span>frida_hi.js<span class="w"> </span>-o<span class="w"> </span>hook_part1.log
+./ezre
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>❯<span class="w"> </span>frida<span class="w"> </span>-n<span class="w"> </span>ezre
+<span class="w">     </span>____
+<span class="w">    </span>/<span class="w"> </span>_<span class="w">  </span><span class="p">|</span><span class="w">   </span>Frida<span class="w"> </span><span class="m">16</span>.2.1<span class="w"> </span>-<span class="w"> </span>A<span class="w"> </span>world-class<span class="w"> </span>dynamic<span class="w"> </span>instrumentation<span class="w"> </span>toolkit
+<span class="w">   </span><span class="p">|</span><span class="w"> </span><span class="o">(</span>_<span class="p">|</span><span class="w"> </span><span class="p">|</span>
+<span class="w">    </span>&gt;<span class="w"> </span>_<span class="w">  </span><span class="p">|</span><span class="w">   </span>Commands:
+<span class="w">   </span>/_/<span class="w"> </span><span class="p">|</span>_<span class="p">|</span><span class="w">       </span><span class="nb">help</span><span class="w">      </span>-&gt;<span class="w"> </span>Displays<span class="w"> </span>the<span class="w"> </span><span class="nb">help</span><span class="w"> </span>system
+<span class="w">   </span>.<span class="w"> </span>.<span class="w"> </span>.<span class="w"> </span>.<span class="w">       </span>object?<span class="w">   </span>-&gt;<span class="w"> </span>Display<span class="w"> </span>information<span class="w"> </span>about<span class="w"> </span><span class="s1">&#39;object&#39;</span>
+<span class="w">   </span>.<span class="w"> </span>.<span class="w"> </span>.<span class="w"> </span>.<span class="w">       </span>exit/quit<span class="w"> </span>-&gt;<span class="w"> </span>Exit
+<span class="w">   </span>.<span class="w"> </span>.<span class="w"> </span>.<span class="w"> </span>.
+<span class="w">   </span>.<span class="w"> </span>.<span class="w"> </span>.<span class="w"> </span>.<span class="w">   </span>More<span class="w"> </span>info<span class="w"> </span>at<span class="w"> </span>https://frida.re/docs/home/
+<span class="w">   </span>.<span class="w"> </span>.<span class="w"> </span>.<span class="w"> </span>.
+<span class="w">   </span>.<span class="w"> </span>.<span class="w"> </span>.<span class="w"> </span>.<span class="w">   </span>Connected<span class="w"> </span>to<span class="w"> </span>Local<span class="w"> </span>System<span class="w"> </span><span class="o">(</span><span class="nv">id</span><span class="o">=</span><span class="nb">local</span><span class="o">)</span>
+Failed<span class="w"> </span>to<span class="w"> </span>spawn:<span class="w"> </span>ambiguous<span class="w"> </span>name<span class="p">;</span><span class="w"> </span>it<span class="w"> </span>matches:<span class="w"> </span>ezre<span class="w"> </span><span class="o">(</span>pid:<span class="w"> </span><span class="m">21768</span><span class="o">)</span>,<span class="w"> </span>ezre<span class="w"> </span><span class="o">(</span>pid:<span class="w"> </span><span class="m">21769</span><span class="o">)</span>
+</code></pre></div>
+<p>这样可以看两个pid，第二个是子进程的，这里hook第一个</p>
+<p>拿到了，其实关键部分就是 part2，第一部分只调用了 call puts 和 call read</p>
+<h2 id="_5">自动化跳转代码<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">ida_kernwin</span>
+
+<span class="c1"># 跳转到指定地址</span>
+<span class="n">ida_kernwin</span><span class="o">.</span><span class="n">jumpto</span><span class="p">(</span><span class="mh">0x40130d</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="_6">正向分析有点难<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>从 <code>Error</code> 反推</p>
+<div class="highlight"><pre><span></span><code>jmp  0x4013ec
+jmp  0x401458
+jmp  0x401486
+jmp  0x4014e9
+jmp  0x401266
+jmp  0x401410   // cmp
+jmp  0x4012b2   // Error
+call  0x4010c0  // puts
+</code></pre></div>
+<h4 id="401410">401410<a class="headerlink" href="#401410" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nl">.text:</span><span class="err">0000000000401410</span>
+<span class="nl">.text:</span><span class="err">0000000000401410</span><span class="w">             </span><span class="nl">loc_401410:</span>
+<span class="nl">.text:</span><span class="err">0000000000401410</span><span class="w"> </span><span class="err">8</span><span class="nf">B</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="no">AC</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_54</span><span class="p">]</span>
+<span class="nl">.text:</span><span class="err">0000000000401413</span><span class="w"> </span><span class="err">48</span><span class="w"> </span><span class="err">98</span><span class="w">       </span><span class="nf">cdqe</span><span class="w">                    </span><span class="c1">; EAX -&gt; RAX (with sign)</span>
+<span class="nl">.text:</span><span class="err">0000000000401415</span><span class="w"> </span><span class="err">48</span><span class="w"> </span><span class="err">8</span><span class="nf">D</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="mi">64</span><span class="w"> </span><span class="no">lea</span><span class="w">     </span><span class="no">rdx</span><span class="p">,</span><span class="w"> </span><span class="no">byte_405880</span><span class="w"> </span><span class="c1">; Load Effective Address</span>
+<span class="nl">.text:</span><span class="err">0000000000401415</span><span class="w"> </span><span class="err">44</span><span class="w"> </span><span class="err">00</span><span class="w"> </span><span class="err">00</span>
+<span class="nl">.text:</span><span class="err">000000000040141</span><span class="nf">C</span><span class="w"> </span><span class="mi">0</span><span class="no">F</span><span class="w"> </span><span class="no">B6</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="no">movzx</span><span class="w">   </span><span class="no">edx</span><span class="p">,</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">rax</span><span class="err">+</span><span class="no">rdx</span><span class="p">]</span><span class="w"> </span><span class="c1">; Move with Zero-Extend</span>
+<span class="nl">.text:</span><span class="err">0000000000401420</span><span class="w"> </span><span class="err">8</span><span class="nf">B</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="no">AC</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_54</span><span class="p">]</span>
+<span class="nl">.text:</span><span class="err">0000000000401423</span><span class="w"> </span><span class="err">48</span><span class="w"> </span><span class="err">98</span><span class="w">       </span><span class="nf">cdqe</span><span class="w">                    </span><span class="c1">; EAX -&gt; RAX (with sign)</span>
+<span class="nl">.text:</span><span class="err">0000000000401425</span><span class="w"> </span><span class="err">0</span><span class="nf">F</span><span class="w"> </span><span class="no">B6</span><span class="w"> </span><span class="mi">44</span><span class="w"> </span><span class="mi">05</span><span class="w"> </span><span class="no">movzx</span><span class="w">   </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">rax</span><span class="err">+</span><span class="no">var_40</span><span class="p">]</span><span class="w"> </span><span class="c1">; Move with Zero-Extend</span>
+<span class="nl">.text:</span><span class="err">0000000000401425</span><span class="w"> </span><span class="nf">C0</span>
+<span class="nl">.text:</span><span class="err">000000000040142</span><span class="nf">A</span><span class="w"> </span><span class="mi">38</span><span class="w"> </span><span class="no">C2</span><span class="w">       </span><span class="no">cmp</span><span class="w">     </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="no">al</span><span class="w">          </span><span class="c1">; Compare Two Operands</span>
+<span class="nl">.text:</span><span class="err">000000000040142</span><span class="nf">C</span><span class="w"> </span><span class="no">CC</span><span class="w">          </span><span class="no">int</span><span class="w">     </span><span class="mi">3</span><span class="w"> </span>
+</code></pre></div>
+<p>很像了，这里的 <code>cmp dl, al</code> 就是核心比较汇编代码，直接hook然后打印</p>
+<p>Python里的spawn可以设置stdin为<code>inherit</code> ，就可以继承 sys.stdin</p>
+<div class="highlight"><pre><span></span><code><span class="n">pid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_device</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">argv</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">env</span><span class="p">,</span> <span class="n">stdio</span><span class="o">=</span><span class="s2">&quot;inherit&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>这里的dl是恒定的，和dx的值一样，是1f，所以密文的第一个字符是 <code>1f</code></p>
+<div class="highlight"><pre><span></span><code><span class="nx">Interceptor</span><span class="p">.</span><span class="nx">attach</span><span class="p">(</span><span class="nx">ptr</span><span class="p">(</span><span class="s2">&quot;0x401AA5&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">onEnter</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;call &quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">.</span><span class="nx">rax</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="cm">/*</span>
+<span class="cm">.text:0000000000401903             loc_401903:</span>
+<span class="cm">.text:0000000000401903 48 8D 95 80 lea     rdx, [rbp+var_280] ; 从子进程获取寄存器</span>
+<span class="cm">.text:0000000000401903 FD FF FF</span>
+<span class="cm">.text:000000000040190A 8B 85 4C FD mov     eax, [rbp+var_2B4]</span>
+<span class="cm">.text:000000000040190A FF FF</span>
+<span class="cm">*/</span>
+<span class="nx">Interceptor</span><span class="p">.</span><span class="nx">attach</span><span class="p">(</span><span class="nx">ptr</span><span class="p">(</span><span class="s2">&quot;0x40190A&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">onEnter</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">base_v10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ptr</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">.</span><span class="nx">rdx</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">base_v10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ptr</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+
+<span class="c1">// ptrace(PTRACE_GETREGS, a1, 0LL, &amp;v10);</span>
+<span class="nx">Interceptor</span><span class="p">.</span><span class="nx">attach</span><span class="p">(</span><span class="nx">ptr</span><span class="p">(</span><span class="s2">&quot;0x401929&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">onEnter</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">regs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">r15</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x00</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">r14</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x08</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">r13</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x10</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">r12</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x18</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">rbp</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x20</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">rbx</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x28</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">r11</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x30</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">r10</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x38</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">r9</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x40</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">r8</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x48</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">rax</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x50</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">rcx</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x58</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">rdx</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x60</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">rsi</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x68</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">rdi</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x70</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">orig_ra</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x78</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">rip</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x80</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">cs</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x88</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">eflags</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x90</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">rsp</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0x98</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">ss</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0xA0</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">fs_base</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0xA8</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">gs_base</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0xB0</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">ds</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0xB8</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">es</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0xC0</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">fs</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0xC8</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">            </span><span class="nx">gs</span><span class="o">:</span><span class="w"> </span><span class="nx">base_v10</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mh">0xD0</span><span class="p">).</span><span class="nx">readULong</span><span class="p">(),</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="p">})</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">regs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">r15</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">r14</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">r13</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">r12</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">rbp</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">rbx</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">r11</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">r10</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">r9</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">r8</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">rax</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">rcx</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">rdx</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">rsi</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">rdi</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">orig_ra</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">rip</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">cs</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">eflags</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">rsp</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ss</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">fs_base</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">gs_base</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ds</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">es</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">fs</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">gs</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="c1">// /**</span>
+<span class="c1">//  * v10.rip = base_qword-&gt;q3;</span>
+<span class="c1">//  */</span>
+<span class="c1">// Interceptor.attach(ptr(&quot;0x401C7D&quot;), {</span>
+<span class="c1">//     onEnter: function(args) {</span>
+<span class="c1">//         console.log(&quot;jmp &quot;, this.context.rax);</span>
+<span class="c1">//     }</span>
+<span class="c1">// });</span>
+
+<span class="nx">Interceptor</span><span class="p">.</span><span class="nx">attach</span><span class="p">(</span><span class="nx">ptr</span><span class="p">(</span><span class="s2">&quot;0x401930&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">onEnter</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">.</span><span class="nx">rdx</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;0x40142d&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;找到cmp dl, al在&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">.</span><span class="nx">rdx</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;此时 ax = &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">regs</span><span class="p">.</span><span class="nx">rax</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">16</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot; dx = &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">regs</span><span class="p">.</span><span class="nx">rdx</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">16</span><span class="p">));</span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">regs</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// console.log(&quot;sub p rip = &quot;, this.context.rdx);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nl">.text:</span><span class="err">0000000000401410</span>
+<span class="nl">.text:</span><span class="err">0000000000401410</span><span class="w">             </span><span class="nl">loc_401410:</span>
+<span class="nl">.text:</span><span class="err">0000000000401410</span><span class="w"> </span><span class="err">8</span><span class="nf">B</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="no">AC</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_54</span><span class="p">]</span>
+<span class="nl">.text:</span><span class="err">0000000000401413</span><span class="w"> </span><span class="err">48</span><span class="w"> </span><span class="err">98</span><span class="w">       </span><span class="nf">cdqe</span><span class="w">                    </span><span class="c1">; EAX -&gt; RAX (with sign)</span>
+<span class="nl">.text:</span><span class="err">0000000000401415</span><span class="w"> </span><span class="err">48</span><span class="w"> </span><span class="err">8</span><span class="nf">D</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="mi">64</span><span class="w"> </span><span class="no">lea</span><span class="w">     </span><span class="no">rdx</span><span class="p">,</span><span class="w"> </span><span class="no">byte_405880</span><span class="w"> </span><span class="c1">; Load Effective Address</span>
+<span class="nl">.text:</span><span class="err">0000000000401415</span><span class="w"> </span><span class="err">44</span><span class="w"> </span><span class="err">00</span><span class="w"> </span><span class="err">00</span>
+<span class="nl">.text:</span><span class="err">000000000040141</span><span class="nf">C</span><span class="w"> </span><span class="mi">0</span><span class="no">F</span><span class="w"> </span><span class="no">B6</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="no">movzx</span><span class="w">   </span><span class="no">edx</span><span class="p">,</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">rax</span><span class="err">+</span><span class="no">rdx</span><span class="p">]</span><span class="w"> </span><span class="c1">; Move with Zero-Extend</span>
+<span class="nl">.text:</span><span class="err">0000000000401420</span><span class="w"> </span><span class="err">8</span><span class="nf">B</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="no">AC</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_54</span><span class="p">]</span>
+<span class="nl">.text:</span><span class="err">0000000000401423</span><span class="w"> </span><span class="err">48</span><span class="w"> </span><span class="err">98</span><span class="w">       </span><span class="nf">cdqe</span><span class="w">                    </span><span class="c1">; EAX -&gt; RAX (with sign)</span>
+<span class="nl">.text:</span><span class="err">0000000000401425</span><span class="w"> </span><span class="err">0</span><span class="nf">F</span><span class="w"> </span><span class="no">B6</span><span class="w"> </span><span class="mi">44</span><span class="w"> </span><span class="mi">05</span><span class="w"> </span><span class="no">movzx</span><span class="w">   </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">rax</span><span class="err">+</span><span class="no">var_40</span><span class="p">]</span><span class="w"> </span><span class="c1">; Move with Zero-Extend</span>
+<span class="nl">.text:</span><span class="err">0000000000401425</span><span class="w"> </span><span class="nf">C0</span>
+<span class="nl">.text:</span><span class="err">000000000040142</span><span class="nf">A</span><span class="w"> </span><span class="mi">38</span><span class="w"> </span><span class="no">C2</span><span class="w">       </span><span class="no">cmp</span><span class="w">     </span><span class="no">dl</span><span class="p">,</span><span class="w"> </span><span class="no">al</span><span class="w">          </span><span class="c1">; Compare Two Operands</span>
+<span class="nl">.text:</span><span class="err">000000000040142</span><span class="nf">C</span><span class="w"> </span><span class="no">CC</span><span class="w">          </span><span class="no">int</span><span class="w">     </span><span class="mi">3</span>
+</code></pre></div>
+<p>这里的 <code>mov  eax, [rbp+var_54]</code> <code>[rbp+rax+var_40]</code> 就是加密后的数据所在，</p>
+<p><code>var_54</code> 是下标， <code>var_40</code> 是第一个元素</p>
+<h2 id="dump">先把所有密文dump出来吧<a class="headerlink" href="#dump" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">ida_chars</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="mh">0x1F</span><span class="p">,</span><span class="w"> </span><span class="mh">0x18</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0F</span><span class="p">,</span><span class="w"> </span><span class="mh">0xA9</span><span class="p">,</span><span class="w"> </span><span class="mh">0xE4</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3D</span><span class="p">,</span><span class="w"> </span><span class="mh">0x7A</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3A</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4D</span><span class="p">,</span><span class="w"> </span><span class="mh">0x17</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="mh">0xD1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x18</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0x68</span><span class="p">,</span><span class="w"> </span><span class="mh">0x1C</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4D</span><span class="p">,</span><span class="w"> </span><span class="mh">0x79</span><span class="p">,</span><span class="w"> </span><span class="mh">0x19</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x41</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="mh">0x4B</span><span class="p">,</span><span class="w"> </span><span class="mh">0x60</span><span class="p">,</span><span class="w"> </span><span class="mh">0x1C</span><span class="p">,</span><span class="w"> </span><span class="mh">0x67</span><span class="p">,</span><span class="w"> </span><span class="mh">0x5C</span><span class="p">,</span><span class="w"> </span><span class="mh">0x38</span><span class="p">,</span><span class="w"> </span><span class="mh">0x23</span><span class="p">,</span><span class="w"> </span><span class="mh">0x1F</span><span class="p">,</span><span class="w"> </span><span class="mh">0x53</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="mh">0x14</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4D</span><span class="p">,</span><span class="w"> </span><span class="mh">0x19</span><span class="p">,</span><span class="w"> </span><span class="mh">0x7A</span><span class="p">,</span><span class="w"> </span><span class="mh">0x7B</span><span class="p">,</span><span class="w"> </span><span class="mh">0x5D</span><span class="p">,</span><span class="w"> </span><span class="mh">0x71</span><span class="p">,</span><span class="w"> </span><span class="mh">0x42</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x37</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="mh">0x9C</span><span class="p">,</span><span class="w"> </span><span class="mh">0x8E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0xDD</span><span class="p">,</span><span class="w"> </span><span class="mh">0xCC</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="mh">0xBB</span><span class="p">,</span><span class="w"> </span><span class="mh">0xAA</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span>
+<span class="p">};</span>
+</code></pre></div>
+<h2 id="flag">然后看看是从哪里写入加密后的flag的<a class="headerlink" href="#flag" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20240516123649169.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240516123649169.png" /></p>
+<p>只有 0x4014cd 程序块是往 rbp+rax+var_40 写东西的，所以hook一下这里（地址是下一个程序块的首地址，即 0x4014e9 ），读取出下标和内容</p>
+<p><img alt="image-20240516124223581.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240516124223581.png" /></p>
+<p>是 rax 和 dl</p>
+<p>没事了， eax &lt;&lt; 2 就是为了访问 qword 数组</p>
+<p>大概能看出规律，是把大于 0xF 的数先加密+压缩到 0xF 以下，然后再 加密+解压到 0xF 以上</p>
+<h2 id="_7">太难分析了<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>frida侧信道爆破</p>
+<p>因为大概看了下，是对字符进行单个加密，那就一位一位的爆破</p>
+<p>爆破不了，遍历第一位 printable 都没找到</p>
+<h2 id="_8">漏分析了<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20240516161312364.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240516161312364.png" /></p>
+<p>这里也会导致 jmp</p>
+<p><a href="https://www.cnblogs.com/Reverse-xiaoyu/p/11397584.html">EFLAGS寄存器（标志寄存器） - Reverse-xiaoyu - 博客园 (cnblogs.com)</a></p>
+<p><img alt="image-20240516170712423.png" src="../assets/img/%E3%80%90CISCN2021%E5%8D%8E%E5%8D%97%E3%80%91ezre/image-20240516170712423.png" /></p>
+<h2 id="dump_1">Dump是正常的<a class="headerlink" href="#dump_1" title="Permanent link">&para;</a></h2>
+<p>就是如果输入不够0x29位，就会用到未初始化的内存，导致结果随机</p>
+<h2 id="_9">思路<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<ol>
+<li>用idapython从IDA中导出所有子程序程序节点的首地址，做成 <code>地址-汇编</code> 的形式</li>
+<li>hook所有节点，在关键节点打印一些消息，然后执行一次程序</li>
+</ol>
+<h2 id="_10">有个神奇的加密<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>输入0123456789abcdefghijklmnopqrstuvwxyzABCDE</p>
+<p>每赋值一次flag，就从map中拿一个数据</p>
+<h2 id="_11">是<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>根据 <code>var_44</code> 来决定下一次分发：</p>
+<div class="highlight"><pre><span></span><code><span class="nl">.text:</span><span class="err">000000000040130</span><span class="nf">D</span><span class="w">             </span><span class="no">loc_40130D</span><span class="p">:</span>
+<span class="nl">.text:</span><span class="err">000000000040130</span><span class="nf">D</span><span class="w"> </span><span class="mi">8</span><span class="no">B</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="no">B0</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_50</span><span class="p">]</span><span class="w"> </span><span class="c1">; 从qword选到的0</span>
+<span class="nl">.text:</span><span class="err">0000000000401310</span><span class="w"> </span><span class="err">48</span><span class="w"> </span><span class="err">8</span><span class="nf">D</span><span class="w"> </span><span class="mi">55</span><span class="w"> </span><span class="no">A8</span><span class="w"> </span><span class="no">lea</span><span class="w">     </span><span class="no">rdx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_58</span><span class="p">]</span><span class="w"> </span><span class="c1">; [rbp+var_58]是-1</span>
+<span class="nl">.text:</span><span class="err">0000000000401314</span><span class="w"> </span><span class="err">8</span><span class="nf">B</span><span class="w"> </span><span class="mi">4</span><span class="no">D</span><span class="w"> </span><span class="no">BC</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="no">ecx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_44</span><span class="p">]</span><span class="w"> </span><span class="c1">; 从qword选到的1</span>
+<span class="nl">.text:</span><span class="err">0000000000401317</span><span class="w"> </span><span class="err">89</span><span class="w"> </span><span class="nf">CE</span><span class="w">       </span><span class="no">mov</span><span class="w">     </span><span class="no">esi</span><span class="p">,</span><span class="w"> </span><span class="no">ecx</span>
+<span class="nl">.text:</span><span class="err">0000000000401319</span><span class="w"> </span><span class="err">89</span><span class="w"> </span><span class="nf">C7</span><span class="w">       </span><span class="no">mov</span><span class="w">     </span><span class="no">edi</span><span class="p">,</span><span class="w"> </span><span class="no">eax</span>
+<span class="nl">.text:</span><span class="err">000000000040131</span><span class="nf">B</span><span class="w"> </span><span class="no">CC</span><span class="w">          </span><span class="no">int</span><span class="w">     </span><span class="mi">3</span><span class="w">               </span><span class="c1">; Trap to Debugger</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nl">.text:</span><span class="err">0000000000401442</span><span class="w"> </span><span class="err">55</span><span class="w">          </span><span class="nf">push</span><span class="w">    </span><span class="no">rbp</span>
+<span class="nl">.text:</span><span class="err">0000000000401443</span><span class="w"> </span><span class="err">48</span><span class="w"> </span><span class="err">89</span><span class="w"> </span><span class="nf">E5</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="no">rbp</span><span class="p">,</span><span class="w"> </span><span class="no">rsp</span>
+<span class="nl">.text:</span><span class="err">0000000000401446</span><span class="w"> </span><span class="err">89</span><span class="w"> </span><span class="err">7</span><span class="nf">D</span><span class="w"> </span><span class="no">EC</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_14</span><span class="p">],</span><span class="w"> </span><span class="no">edi</span>
+<span class="nl">.text:</span><span class="err">0000000000401449</span><span class="w"> </span><span class="err">89</span><span class="w"> </span><span class="err">75</span><span class="w"> </span><span class="nf">E8</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="p">[</span><span class="no">rbp-18h</span><span class="p">],</span><span class="w"> </span><span class="no">esi</span><span class="w"> </span><span class="c1">; 主要看这个</span>
+<span class="nl">.text:</span><span class="err">000000000040144</span><span class="nf">C</span><span class="w"> </span><span class="mi">48</span><span class="w"> </span><span class="mi">89</span><span class="w"> </span><span class="mi">55</span><span class="w"> </span><span class="no">E0</span><span class="w"> </span><span class="no">mov</span><span class="w">     </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_20</span><span class="p">],</span><span class="w"> </span><span class="no">rdx</span>
+<span class="nl">.text:</span><span class="err">0000000000401450</span><span class="w"> </span><span class="err">81</span><span class="w"> </span><span class="err">7</span><span class="nf">D</span><span class="w"> </span><span class="no">EC</span><span class="w"> </span><span class="no">E7</span><span class="w"> </span><span class="no">cmp</span><span class="w">     </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_14</span><span class="p">],</span><span class="w"> </span><span class="mi">3</span><span class="no">E7h</span><span class="w"> </span><span class="c1">; Compare Two Operands; 03 E7 是在 qword 的末端，这里是判断是否结尾</span>
+
+<span class="nl">.text:</span><span class="err">000000000040126</span><span class="nf">B</span><span class="w"> </span><span class="mi">48</span><span class="w"> </span><span class="mi">8</span><span class="no">B</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="no">E0</span><span class="w"> </span><span class="no">mov</span><span class="w">     </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_20</span><span class="p">]</span>
+<span class="nl">.text:</span><span class="err">000000000040126</span><span class="nf">F</span><span class="w"> </span><span class="mi">8</span><span class="no">B</span><span class="w"> </span><span class="mi">00</span><span class="w">       </span><span class="no">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rax</span><span class="p">]</span><span class="c1">; eax = -1</span>
+
+<span class="nl">.text:</span><span class="err">0000000000401434</span><span class="w"> </span><span class="err">48</span><span class="w"> </span><span class="err">8</span><span class="nf">B</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="no">E0</span><span class="w"> </span><span class="no">mov</span><span class="w">     </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_20</span><span class="p">]</span>
+<span class="nl">.text:</span><span class="err">0000000000401438</span><span class="w"> </span><span class="err">8</span><span class="nf">B</span><span class="w"> </span><span class="mi">00</span><span class="w">       </span><span class="no">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rax</span><span class="p">]</span><span class="c1">; eax = -1</span>
+<span class="nl">.text:</span><span class="err">000000000040143</span><span class="nf">A</span><span class="w"> </span><span class="mi">83</span><span class="w"> </span><span class="no">F8</span><span class="w"> </span><span class="mi">06</span><span class="w">    </span><span class="no">cmp</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span>
+
+<span class="nl">.text:</span><span class="err">0000000000401330</span><span class="w"> </span><span class="err">48</span><span class="w"> </span><span class="err">8</span><span class="nf">B</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="no">E0</span><span class="w"> </span><span class="no">mov</span><span class="w">     </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_20</span><span class="p">]</span>
+<span class="nl">.text:</span><span class="err">0000000000401334</span><span class="w"> </span><span class="err">8</span><span class="nf">B</span><span class="w"> </span><span class="mi">00</span><span class="w">       </span><span class="no">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rax</span><span class="p">]</span><span class="w"> </span><span class="c1">;eax = -1</span>
+<span class="nl">.text:</span><span class="err">0000000000401336</span><span class="w"> </span><span class="err">8</span><span class="nf">B</span><span class="w"> </span><span class="mi">55</span><span class="w"> </span><span class="no">EC</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="no">edx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_14</span><span class="p">]</span><span class="w"> </span><span class="c1">; = 3E7h</span>
+<span class="nl">.text:</span><span class="err">0000000000401339</span><span class="w"> </span><span class="err">89</span><span class="w"> </span><span class="nf">C1</span><span class="w">       </span><span class="no">mov</span><span class="w">     </span><span class="no">ecx</span><span class="p">,</span><span class="w"> </span><span class="no">eax</span><span class="w">  </span><span class="c1">; -1 FFFFFFFF</span>
+<span class="nl">.text:</span><span class="err">000000000040133</span><span class="nf">B</span><span class="w"> </span><span class="no">D3</span><span class="w"> </span><span class="no">EA</span><span class="w">       </span><span class="no">shr</span><span class="w">     </span><span class="no">edx</span><span class="p">,</span><span class="w"> </span><span class="no">cl</span><span class="w"> </span><span class="c1">;0        ; Shift Logical Right</span>
+<span class="nl">.text:</span><span class="err">000000000040133</span><span class="nf">D</span><span class="w"> </span><span class="mi">89</span><span class="w"> </span><span class="no">D0</span><span class="w">       </span><span class="no">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="no">edx</span><span class="w"> </span>
+<span class="no">.text</span><span class="p">:</span><span class="mi">000000000040133</span><span class="no">F</span><span class="w"> </span><span class="mi">83</span><span class="w"> </span><span class="no">E0</span><span class="w"> </span><span class="mi">01</span><span class="w">    </span><span class="no">and</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">          </span><span class="c1">; Logical AND</span>
+<span class="nl">.text:</span><span class="err">0000000000401342</span><span class="w"> </span><span class="err">85</span><span class="w"> </span><span class="nf">C0</span><span class="w">       </span><span class="no">test</span><span class="w">    </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="no">eax</span><span class="w">        </span><span class="c1">; Logical Compare</span>
+
+<span class="nl">.text:</span><span class="err">0000000000401296</span><span class="w"> </span><span class="err">48</span><span class="w"> </span><span class="err">8</span><span class="nf">B</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="no">E0</span><span class="w"> </span><span class="no">mov</span><span class="w">     </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_20</span><span class="p">]</span>
+<span class="nl">.text:</span><span class="err">000000000040129</span><span class="nf">A</span><span class="w"> </span><span class="mi">8</span><span class="no">B</span><span class="w"> </span><span class="mi">00</span><span class="w">       </span><span class="no">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rax</span><span class="p">]</span><span class="w"> </span><span class="c1">; -1</span>
+<span class="nl">.text:</span><span class="err">000000000040129</span><span class="nf">C</span><span class="w"> </span><span class="mi">89</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="no">FC</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="no">dword</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_8</span><span class="err">+</span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="no">eax</span><span class="w"> </span><span class="c1">; -1</span>
+
+<span class="nl">.text:</span><span class="err">00000000004013</span><span class="nf">E3</span><span class="w"> </span><span class="mi">8</span><span class="no">B</span><span class="w"> </span><span class="mi">45</span><span class="w"> </span><span class="no">FC</span><span class="w">    </span><span class="no">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="no">dword</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_8</span><span class="err">+</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="nl">.text:</span><span class="err">0000000000401361</span><span class="w"> </span><span class="err">5</span><span class="nf">D</span><span class="w">          </span><span class="no">pop</span><span class="w">     </span><span class="no">rbp</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>.text:0000000000401359 89 45 B8    mov     [rbp+var_48], eax
+.text:000000000040135C 83 7D B8 08 cmp     [rbp+var_48], 8 ; Compare Two Operands
+</code></pre></div>
+<p>0</p>
+<h2 id="_12">发现<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nf">jmp</span><span class="w"> </span><span class="mi">0x40126b</span><span class="w">  </span><span class="c1">// </span>
+<span class="w">            </span><span class="nf">mov</span><span class="w">     </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_20</span><span class="p">]</span>
+<span class="w">            </span><span class="nf">mov</span><span class="w">     </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</code></pre></div>
+<p>在 <code>var_44 = 0 , var_58 = 6</code> 的时候，会直接跳到 </p>
+<div class="highlight"><pre><span></span><code><span class="nf">jmp</span><span class="w"> </span><span class="mi">0x4012c2</span><span class="w">  </span><span class="c1">// </span>
+<span class="w">            </span><span class="nf">movzx</span><span class="w">   </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rbp</span><span class="err">+</span><span class="no">var_15</span><span class="p">]</span><span class="w"> </span><span class="c1">; Move with Zero-Extend</span>
+<span class="w">            </span><span class="nf">test</span><span class="w">    </span><span class="no">al</span><span class="p">,</span><span class="w"> </span><span class="no">al</span><span class="w">          </span><span class="c1">; Logical Compare</span>
+</code></pre></div>
+<p>然后又看懂了， <code>var_15</code> 其实就是 <code>var_44 + 3</code> 上面调用的（<mark>关键</mark>，因为查看交叉引用是看不到 <code>var_15</code> 的“写”过程的）</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
