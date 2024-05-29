@@ -1,6 +1,15 @@
 # Debug-x64dbg脱壳
 
 [文件](./assets/Bin/Debug.exe){:download="Debug.exe"}
+
+## 更新
+
+参考：[Windows平台反调试技术学习-看雪](https://bbs.kanxue.com/thread-280080.htm)
+
+这里介绍了各种反调试的方法，本题用到了：
+
+1. 时钟检测——检测程序运行时间戳，如果过慢，说明是在调试
+2. TLS回调函数——在程序入口之前就可以执行
 ## 反调1
 
 用 x64dbg 打开，调试到这里的时候按F7或者F8都会跑飞，直接终止
